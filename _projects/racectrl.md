@@ -1,7 +1,7 @@
 ---
 layout: project
 title: RaceCTRL
-summary: Image classification system that automatically detects collisions in Formula 1 races to enhance safety operations and incident response capabilities.
+summary: Image classification system that automatically detects collisions in motorsport to increase fairness and consistency.
 category: Classification
 tags: [Image Classification, Computer Vision]
 icon: 🏎️
