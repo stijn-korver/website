@@ -338,6 +338,22 @@ section { padding: 7rem 3rem; }
   transform-origin: left;
   transition: transform 0.3s;
 }
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card > div:last-child,
+.project-card > a:last-child {
+  margin-top: auto;
+}
 .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(45,55,120,0.1); }
 .project-card:hover::before { transform: scaleX(1); }
 
