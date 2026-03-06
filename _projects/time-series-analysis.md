@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Predicting the Stock Market
-summary: Developed a research assistant application that streamlines literature review and synthesis for academic workflows.
+title: Predicting the Chip Industry
+summary: Application that can predict the daily closing stock prices of companies operating in or closely associated with the chip industry.
 category: Predicting
 tags: [Finance, Predicting]
 icon: 💹

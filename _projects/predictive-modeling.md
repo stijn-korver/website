@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Predicting Diabetes in Hospital Patients
-summary: Developed a research assistant application that streamlines literature review and synthesis for academic workflows.
+title: Predicting Hospital Readmissions
+summary: Model that can identify the key factors that contribute to hospital readmissions within 30 days among diabetic patients.
 category: Predicting
 tags: [Medical, Predictive]
 icon: 🏥

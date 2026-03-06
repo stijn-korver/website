@@ -1,7 +1,7 @@
 ---
 layout: project
 title: RaceCTRL
-summary: Developed a fair motorsport stewarding tool.
+summary: Image classification system that automatically detects collisions in Formula 1 races to enhance safety operations and incident response capabilities.
 category: Classification
 tags: [Image Classification, Computer Vision]
 icon: 🏎️
