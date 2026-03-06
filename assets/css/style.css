@@ -40,14 +40,9 @@ nav {
 nav.scrolled { box-shadow: 0 2px 20px rgba(45,55,120,0.1); }
 
 .nav-logo {
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: -0.03em;
-  color: var(--navy);
   text-decoration: none;
+  display: inline-block;
 }
-.nav-logo span { color: var(--accent-dark); }
 
 .nav-links {
   display: flex;
@@ -379,7 +374,7 @@ section { padding: 7rem 3rem; }
 .project-icon {
   width: 48px;
   height: 48px;
-  background: var(--accent);
+  background: var(--navy);
   border-radius: 0.75rem;
   margin-bottom: 1.5rem;
   display: flex;
@@ -544,14 +539,9 @@ footer {
 }
 
 .footer-logo {
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1rem;
-  color: rgba(45,55,120,0.5);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  display: inline-block;
 }
-.footer-logo span { color: var(--navy); }
 
 .footer-copy {
   font-size: 0.8rem;
