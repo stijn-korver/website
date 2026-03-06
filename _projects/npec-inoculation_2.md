@@ -1,6 +1,6 @@
 ---
 layout: project
-title: End-to-End Inoculation System (with Charts)
+title: Charts Test
 summary: Autonomous plant inoculation system combining deep learning computer vision with robotic control, built for the Netherlands Plant Eco-phenotyping Centre (NPEC).
 category: AI & Robotics
 tags: [Computer Vision, Robotics, Deep Learning]
@@ -9,52 +9,78 @@ order: 2
 ---
 
 <style>
-  .pipeline {
-    display: flex;
-    align-items: center;
-    gap: 0;
+  /* PIPELINE — 3 columns top row, 3 columns bottom row on desktop */
+  .pipeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
     margin: 2.5rem 0;
-    overflow-x: auto;
-    padding-bottom: 1rem;
+  }
+  .pipeline-row {
+    display: contents;
   }
   .pipeline-step {
-    flex: 1;
-    min-width: 120px;
     background: var(--gray-light);
     border-radius: 0.75rem;
     padding: 1.25rem 0.75rem;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
   }
   .pipeline-step:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(45,55,120,0.12); }
   .pipeline-step.highlight { background: var(--black); }
   .step-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
-  .step-title { font-family: var(--font-head); font-size: 0.8rem; font-weight: 700; color: var(--black); margin-bottom: 0.2rem; }
+  .step-title { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--black); margin-bottom: 0.2rem; }
   .pipeline-step.highlight .step-title { color: var(--accent); }
   .step-label { font-size: 0.7rem; color: var(--gray); font-weight: 300; line-height: 1.4; }
   .pipeline-step.highlight .step-label { color: rgba(255,255,255,0.5); }
-  .pipeline-arrow { font-size: 1.1rem; color: var(--accent); font-weight: 700; flex-shrink: 0; padding: 0 0.2rem; }
+  .step-num {
+    position: absolute;
+    top: 0.5rem; left: 0.75rem;
+    font-family: var(--font-head);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--gray-mid);
+    letter-spacing: 0.05em;
+  }
+  .pipeline-step.highlight .step-num { color: rgba(255,255,255,0.2); }
 
+  .pipeline-connector {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.1rem 0;
+  }
+
+  /* BEFORE/AFTER */
   .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0; }
   .ba-panel { border-radius: 0.75rem; overflow: hidden; border: 1.5px solid var(--gray-mid); }
   .ba-label { background: var(--black); color: var(--white); font-family: var(--font-head); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.6rem 1rem; }
   .ba-label.after { background: var(--accent); color: var(--black); }
-  .ba-image { background: var(--gray-light); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 0.8rem; font-weight: 300; text-align: center; padding: 1.5rem; line-height: 1.7; }
+  .ba-image { background: var(--gray-light); overflow: hidden; }
+  .ba-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .ba-stats { padding: 0.75rem 1rem; border-top: 1px solid var(--gray-mid); display: flex; gap: 1.5rem; }
   .ba-stat { font-size: 0.78rem; color: var(--gray); }
   .ba-stat strong { color: var(--black); font-weight: 600; display: block; font-size: 0.9rem; }
 
+  /* CHARTS */
   .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0; }
   .chart-card { background: var(--gray-light); border-radius: 0.75rem; padding: 1.5rem; }
   .chart-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.2rem; }
   .chart-subtitle { font-size: 0.78rem; color: var(--gray); margin-bottom: 1rem; font-weight: 300; }
   .chart-container { position: relative; height: 220px; }
 
+  /* CALLOUT */
   .callout { background: var(--black); color: var(--white); border-radius: 0.75rem; padding: 1.5rem 2rem; margin: 2rem 0; display: flex; align-items: center; gap: 1.5rem; }
   .callout-icon { font-size: 2rem; flex-shrink: 0; }
   .callout-text { font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.8); }
   .callout-text strong { color: var(--accent); font-weight: 600; }
 
+  /* TABLE */
   .project-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
   .project-body th { background: var(--black); color: var(--white); padding: 0.75rem 1rem; text-align: left; font-family: var(--font-head); font-weight: 600; font-size: 0.8rem; }
   .project-body td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--gray-light); color: var(--gray); }
@@ -62,8 +88,8 @@ order: 2
 
   @media (max-width: 700px) {
     .chart-grid, .before-after { grid-template-columns: 1fr; }
-    .pipeline-arrow { display: none; }
-    .pipeline-step { min-width: 90px; }
+    .pipeline-grid { grid-template-columns: 1fr; }
+    .pipeline-connector { display: none; }
   }
 </style>
 
@@ -79,41 +105,43 @@ Developed at Breda University of Applied Sciences for the **Netherlands Plant Ec
 
 The full system runs autonomously from image capture to inoculation delivery.
 
-<div class="pipeline">
+<div class="pipeline-grid">
   <div class="pipeline-step">
+    <div class="step-num">01</div>
     <div class="step-icon">📷</div>
     <div class="step-title">Image Capture</div>
     <div class="step-label">Daily time-series photography of Petri dishes</div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step highlight">
+    <div class="step-num">02</div>
     <div class="step-icon">🧠</div>
     <div class="step-title">Segmentation</div>
     <div class="step-label">U-Net detects roots, seeds & shoots</div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step highlight">
+    <div class="step-num">03</div>
     <div class="step-icon">📍</div>
     <div class="step-title">Root Tip Detection</div>
     <div class="step-label">Post-processing localises inoculation targets</div>
   </div>
-  <div class="pipeline-arrow">→</div>
+  <div class="pipeline-connector">↓ ↓ ↓</div>
   <div class="pipeline-step">
-    <div class="step-icon">🔄</div>
-    <div class="step-title">Coordinate Transform</div>
-    <div class="step-label">Pixel → robot workspace</div>
+    <div class="step-num">06</div>
+    <div class="step-icon">🌱</div>
+    <div class="step-title">Inoculation</div>
+    <div class="step-label">Autonomous delivery to root tip</div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step highlight">
+    <div class="step-num">05</div>
     <div class="step-icon">🤖</div>
     <div class="step-title">Robotic Control</div>
     <div class="step-label">PID positions pipette precisely</div>
   </div>
-  <div class="pipeline-arrow">→</div>
   <div class="pipeline-step">
-    <div class="step-icon">🌱</div>
-    <div class="step-title">Inoculation</div>
-    <div class="step-label">Autonomous delivery to root tip</div>
+    <div class="step-num">04</div>
+    <div class="step-icon">🔄</div>
+    <div class="step-title">Coordinate Transform</div>
+    <div class="step-label">Pixel → robot workspace</div>
   </div>
 </div>
 
@@ -127,7 +155,7 @@ A key challenge was separating individual plant roots in dense images. Early mod
   <div class="ba-panel">
     <div class="ba-label">Before</div>
     <div class="ba-image">
-      Export slide 10 (left image) from the PDF<br/>save as <code>assets/images/npec-before.jpg</code>
+      <img src="/assets/images/npec-before.jpg" alt="Before: instance segmentation with spurious detections" />
     </div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>5 instances</strong>Plants detected</div>
@@ -137,7 +165,7 @@ A key challenge was separating individual plant roots in dense images. Early mod
   <div class="ba-panel">
     <div class="ba-label after">After</div>
     <div class="ba-image">
-      Export slide 10 (right image) from the PDF<br/>save as <code>assets/images/npec-after.jpg</code>
+      <img src="/assets/images/npec-after.jpg" alt="After: improved instance segmentation" />
     </div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>2 instances</strong>Plants detected</div>
@@ -188,7 +216,6 @@ The delivered system provides NPEC with a scalable, automated alternative to man
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   const navy = '#2d3778';
-  const yellow = '#f5b800';
   const gray = '#7a7f9a';
   const lgray = 'rgba(45,55,120,0.07)';
 
@@ -198,9 +225,6 @@ The delivered system provides NPEC with a scalable, automated alternative to man
       return Math.max(end * 0.8, base + (Math.random() - 0.5) * base * noise);
     });
   }
-
-  const pidLabels = Array.from({length: 200}, (_, i) => i);
-  const rlLabels  = Array.from({length: 14},  (_, i) => i);
 
   const commonOptions = (maxY, maxTicks) => ({
     responsive: true,
@@ -224,7 +248,7 @@ The delivered system provides NPEC with a scalable, automated alternative to man
   new Chart(document.getElementById('pidChart'), {
     type: 'line',
     data: {
-      labels: pidLabels,
+      labels: Array.from({length: 200}, (_, i) => i),
       datasets: [
         { label: 'X-axis', data: decay(200, 70, 0.12, 0.05, 0.25), borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,0.07)', borderWidth: 2, pointRadius: 0, tension: 0.4, fill: true },
         { label: 'Y-axis', data: decay(200, 60, 0.15, 0.055, 0.25), borderColor: navy, backgroundColor: 'rgba(45,55,120,0.05)', borderWidth: 2, pointRadius: 0, tension: 0.4, fill: true },
@@ -238,7 +262,7 @@ The delivered system provides NPEC with a scalable, automated alternative to man
   new Chart(document.getElementById('rlChart'), {
     type: 'line',
     data: {
-      labels: rlLabels,
+      labels: Array.from({length: 14}, (_, i) => i),
       datasets: [
         { label: 'X-axis', data: decay(14, 70, 1.05, 0.45, 0.5), borderColor: '#e74c3c', backgroundColor: 'rgba(231,76,60,0.07)', borderWidth: 2, pointRadius: 3, tension: 0.3, fill: true },
         { label: 'Y-axis', data: decay(14, 60, 0.98, 0.5, 0.5), borderColor: navy, backgroundColor: 'rgba(45,55,120,0.05)', borderWidth: 2, pointRadius: 3, tension: 0.3, fill: true },
