@@ -9,6 +9,8 @@ order: 1
 ---
 
 <style>
+  /* GENERAL */
+  .project-body p { text-align: justify; }
   /* PIPELINE — 3 columns top row, 3 columns bottom row on desktop */
   .pipeline-grid {
     display: grid;
@@ -95,32 +97,32 @@ Plant research requires precise, repeatable inoculation of hundreds of plants. T
 
 Developed at Breda University of Applied Sciences for the **Netherlands Plant Eco-phenotyping Centre (NPEC)**, this project delivers a fully autonomous end-to-end inoculation system. It handles the entire workflow: from real-time plant detection using image segmentation, to precise inoculation delivery via robotic control targeting *Arabidopsis thaliana* roots across NPEC's Hades system, which processes up to 10,000 seedlings across 2,000+ Petri dishes.
 
-The system pipeline:
+---
+
+## System Pipeline
+
+The full system runs autonomously from image capture to inoculation delivery.
 
 <div class="pipeline-grid">
   <div class="pipeline-step">
-    <div class="step-num">01</div>
     <div class="step-icon"><img src="/assets/images/npec/pipeline-capture.png" alt="Image Capture" /></div>
-    <div class="step-title">Image Capture</div>
-    <div class="step-label">Daily time-series photography of Petri dishes</div>
+    <div class="step-title">01. Image Capture</div>
+    <div class="step-label">Daily Time-Series Photography of Petri Dishes</div>
   </div>
   <div class="pipeline-step highlight">
-    <div class="step-num">02</div>
     <div class="step-icon"><img src="/assets/images/npec/pipeline-segmentation.png" alt="Segmentation" /></div>
-    <div class="step-title">Segmentation</div>
-    <div class="step-label">U-Net detects roots, seeds & shoots</div>
+    <div class="step-title">02. Segmentation</div>
+    <div class="step-label">U-Net Detects Roots</div>
   </div>
   <div class="pipeline-step highlight">
-    <div class="step-num">03</div>
     <div class="step-icon"><img src="/assets/images/npec/pipeline-roottip.png" alt="Root Tip Detection" /></div>
-    <div class="step-title">Root Tip Detection</div>
-    <div class="step-label">Post-processing localises inoculation targets</div>
+    <div class="step-title">03. Root Tip Detection</div>
+    <div class="step-label">Post-Processing Localises Inoculation Targets</div>
   </div>
   <div class="pipeline-step">
-    <div class="step-num">04</div>
     <div class="step-icon"><img src="/assets/images/npec/pipeline-inoculation.gif" alt="Inoculation" /></div>
-    <div class="step-title">Inoculation</div>
-    <div class="step-label">Autonomous delivery to root tip</div>
+    <div class="step-title">04. Inoculation</div>
+    <div class="step-label">Autonomous Delivery to Root Tips</div>
   </div>
 </div>
 
@@ -134,7 +136,7 @@ A key challenge was separating individual plant roots in dense images. Early mod
   <div class="ba-panel">
     <div class="ba-label">Before</div>
     <div class="ba-image">
-      <img src="/assets/images/npec/before.png" alt="Before: instance segmentation with spurious detections" />
+      <img src="/assets/images/npec/segmentation-before.png" alt="Before: instance segmentation with spurious detections" />
     </div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>5 instances</strong>Plants detected</div>
@@ -144,7 +146,7 @@ A key challenge was separating individual plant roots in dense images. Early mod
   <div class="ba-panel">
     <div class="ba-label after">After</div>
     <div class="ba-image">
-      <img src="/assets/images/npec/after.png" alt="After: improved instance segmentation" />
+      <img src="/assets/images/npec/segmentation-after.png" alt="After: improved instance segmentation" />
     </div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>2 instances</strong>Plants detected</div>
