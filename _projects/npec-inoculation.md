@@ -6,6 +6,7 @@ category: Automation
 tags: [Computer Vision, Robotics]
 icon: 🌱
 order: 1
+date: January 2025
 ---
 
 <style>
