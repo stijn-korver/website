@@ -377,7 +377,8 @@ section { padding: 7rem 3rem; }
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: inherit;
 }
 
@@ -403,6 +404,7 @@ section { padding: 7rem 3rem; }
   -webkit-box-orient: vertical;
   line-clamp: 3;
   overflow: hidden;
+  flex: 1;
 }
 
 .project-card-wrap {
@@ -412,7 +414,9 @@ section { padding: 7rem 3rem; }
 .project-card-wrap .project-card {
   flex: 1;
 }
-.project-card > div:last-child,
+.project-card > div:last-child {
+  margin-top: auto;
+}
 .project-card > a:last-child {
   margin-top: auto;
 }
