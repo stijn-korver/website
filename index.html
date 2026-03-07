@@ -49,23 +49,25 @@ layout: default
   <div class="projects-grid">
     {% assign sorted_projects = site.projects | where: 'featured', true | sort: 'order' | limit: 3 %}
     {% for project in sorted_projects %}
-    <a href="{{ project.url | relative_url }}" class="project-card reveal">
-      <div class="project-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
-      {% if project.banner %}
-        <div class="project-banner">
-          <img src="{{ project.banner | relative_url }}" alt="{{ project.title }}" />
+    <div class="project-card-wrap reveal">
+      <a href="{{ project.url | relative_url }}" class="project-card">
+        <div class="project-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+        {% if project.banner %}
+          <div class="project-banner">
+            <img src="{{ project.banner | relative_url }}" alt="{{ project.title }}" />
+          </div>
+        {% else %}
+          <div class="project-icon">{{ project.icon }}</div>
+        {% endif %}
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-desc">{{ project.summary }}</p>
+        <div class="project-tags">
+          {% for tag in project.tags %}
+            <span class="project-tag">{{ tag }}</span>
+          {% endfor %}
         </div>
-      {% else %}
-        <div class="project-icon">{{ project.icon }}</div>
-      {% endif %}
-      <h3 class="project-title">{{ project.title }}</h3>
-      <p class="project-desc">{{ project.summary }}</p>
-      <div class="project-tags">
-        {% for tag in project.tags limit:1 %}
-          <span class="project-tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    </a>
+      </a>
+    </div>
     {% endfor %}
   </div>
 </section>
