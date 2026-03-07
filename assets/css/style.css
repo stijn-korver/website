@@ -626,6 +626,53 @@ footer {
 .filter-btn:hover { border-color: var(--gray-mid); color: var(--navy); }
 .filter-btn.active { background: var(--accent); color: var(--navy); border-color: var(--accent); }
 
+/* DASHBOARD EMBED */
+
+.dashboard-embed {
+  margin: 2rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #1e1e1e;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-embed iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.dashboard-note {
+  padding: 0.65rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, #979593);
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 0;
+}
+
+.dashboard-note code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* Hide the setup note once a real src URL is in place —
+   add class="dashboard-note hidden" to the <p> when live */
+.dashboard-note.hidden {
+  display: none;
+}
+
+/* Responsive: shrink height on smaller screens */
+@media (max-width: 768px) {
+  .dashboard-embed iframe {
+    height: 420px;
+  }
+}
+
 /* ANIMATIONS */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
