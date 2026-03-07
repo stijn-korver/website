@@ -60,9 +60,11 @@ layout: default
       {% endif %}
       <h3 class="project-title">{{ project.title }}</h3>
       <p class="project-desc">{{ project.summary }}</p>
-      {% for tag in project.tags limit:1 %}
-        <span class="project-tag">{{ tag }}</span>
-      {% endfor %}
+      <div class="project-tags">
+        {% for tag in project.tags limit:1 %}
+          <span class="project-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
     </a>
     {% endfor %}
   </div>
