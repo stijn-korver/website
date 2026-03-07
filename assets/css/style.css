@@ -473,11 +473,24 @@ section { padding: 7rem 3rem; }
   color: var(--gray);
   font-weight: 300;
   line-height: 1.7;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.project-tags {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .project-tag {
   display: inline-block;
-  margin-top: 1.5rem;
+  margin-top: 0;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.08em;
