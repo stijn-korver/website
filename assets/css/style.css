@@ -644,7 +644,7 @@ footer {
   .nav-hamburger { display: flex; }
   .hero { padding: 8rem 1.5rem 4rem; }
   .hero h1 { font-size: clamp(2.5rem, 10vw, 4.5rem); }
-  .hero-bg { width: 100%; clip-path: none; opacity: 0.3; }
+  .hero-bg { width: 100%; clip-path: none; opacity: 1; }
   .hero-dot-grid { display: none; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .stats { grid-template-columns: repeat(2, 1fr); padding: 3rem 1.5rem; }
