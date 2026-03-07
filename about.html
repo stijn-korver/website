@@ -18,7 +18,7 @@ permalink: /about/
     background-image: radial-gradient(circle, rgba(55,71,130,0.15) 1px, transparent 1px);
     background-size: 32px 32px;
   }
-  .about-page-hero-content { position: relative; z-index: 1; }
+  .about-page-hero-content { position: relative; z-index: 1; max-width: 700px; }
   .about-page-hero .section-tag { color: rgba(55,71,130,0.5); }
   .about-page-hero h1 {
     font-family: var(--font-head);
@@ -26,50 +26,186 @@ permalink: /about/
     font-weight: 800;
     letter-spacing: -0.04em;
     color: var(--navy);
-    margin: 0.5rem 0 0;
+    margin: 0.5rem 0 1.5rem;
+    line-height: 1.05;
   }
   .about-page-hero h1 em { font-style: normal; color: var(--black); }
-
-  .about-page-body {
-    padding: 6rem 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
+  .about-hero-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(55,71,130,0.65);
+    line-height: 1.75;
+    max-width: 520px;
   }
 
-  .about-page-visual {
-    background: var(--accent);
-    border-radius: 1rem;
+  /* MISSION */
+  .about-mission {
+    padding: 7rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+    align-items: start;
+  }
+  .about-mission-text h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  .about-mission-text h2 em { font-style: normal; color: var(--gray); }
+  .about-mission-text p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+  .about-mission-visual {
+    background: var(--navy);
+    border-radius: 1.25rem;
     aspect-ratio: 4/3;
-    position: relative;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    top: 6rem;
+    position: relative;
+    overflow: hidden;
   }
-  .about-page-visual-inner {
+  .about-mission-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(251,195,36,0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .about-mission-visual-inner {
+    position: relative;
+    z-index: 1;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: var(--accent);
+    background: conic-gradient(var(--accent) 0deg, var(--accent) 120deg, transparent 120deg, transparent 240deg, rgba(245,184,0,0.15) 240deg);
+    animation: spin 12s linear infinite;
   }
-  .about-page-visual::after {
-    content: none;
+  .about-mission-visual::after {
+    content: 'K';
+    position: absolute;
+    font-family: var(--font-head);
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.05em;
+    z-index: 2;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* PRINCIPLES */
+  .about-principles {
+    background: var(--gray-light);
+    padding: 7rem 3rem;
+  }
+  .about-principles-header {
+    max-width: 560px;
+    margin-bottom: 4rem;
+  }
+  .about-principles-header h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .about-principles-header h2 em { font-style: normal; color: var(--gray); }
+  .about-principles-header p {
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .principle-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-left: 3px solid var(--accent);
+  }
+  .principle-num {
+    font-family: var(--font-head);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--accent-dark);
+    margin-bottom: 0.75rem;
+  }
+  .principle-title {
+    font-family: var(--font-head);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .principle-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.65;
   }
 
-  .about-page-text h2 {
-    font-family: var(--font-head);
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--black);
-    margin: 2.5rem 0 1rem;
+  /* WHY LEAN */
+  .about-lean {
+    padding: 7rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+    align-items: center;
   }
-  .about-page-text h2:first-child { margin-top: 0; }
-  .about-page-text p {
+  .about-lean-visual {
+    background: var(--accent);
+    border-radius: 1.25rem;
+    padding: 3rem;
+    position: relative;
+  }
+  .about-lean-stat {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(55,71,130,0.15);
+  }
+  .about-lean-stat:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .about-lean-stat-num {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .about-lean-stat-label {
+    font-size: 0.875rem;
+    color: rgba(55,71,130,0.6);
+    font-weight: 300;
+  }
+  .about-lean-text { }
+  .about-lean-text h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  .about-lean-text h2 em { font-style: normal; color: var(--gray); }
+  .about-lean-text p {
     color: var(--gray);
     font-size: 1.05rem;
     font-weight: 300;
@@ -77,38 +213,30 @@ permalink: /about/
     margin-bottom: 1rem;
   }
 
-  .about-values {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  .about-value {
-    background: var(--gray-light);
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-  }
-  .about-value-title {
-    font-family: var(--font-head);
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--black);
-    margin-bottom: 0.4rem;
-  }
-  .about-value-desc {
-    font-size: 0.8rem;
-    color: var(--gray);
-    font-weight: 300;
-    line-height: 1.5;
-  }
-
   /* TEAM */
   .about-team {
-    padding: 6rem 3rem;
+    padding: 7rem 3rem;
     background: var(--gray-light);
   }
   .about-team-header {
-    margin-bottom: 3rem;
+    max-width: 560px;
+    margin-bottom: 4rem;
+  }
+  .about-team-header h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+  .about-team-header h2 em { font-style: normal; color: var(--gray); }
+  .about-team-header p {
+    color: var(--gray);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
   }
   .team-grid {
     display: grid;
@@ -141,9 +269,7 @@ permalink: /about/
     font-weight: 800;
     color: var(--accent);
   }
-  .person-body {
-    padding: 1.5rem;
-  }
+  .person-body { padding: 1.5rem; }
   .person-name {
     font-family: var(--font-head);
     font-size: 1.1rem;
@@ -222,11 +348,12 @@ permalink: /about/
 
   @media (max-width: 900px) {
     .about-page-hero { padding: 8rem 1.5rem 3rem; }
-    .about-page-body { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
-    .about-page-visual { position: relative; top: 0; }
-    .about-values { grid-template-columns: 1fr; }
+    .about-mission { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+    .about-principles { padding: 5rem 1.5rem; }
+    .principles-grid { grid-template-columns: 1fr; }
+    .about-lean { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+    .about-team { padding: 5rem 1.5rem; }
     .team-grid { grid-template-columns: 1fr 1fr; }
-    .about-team { padding: 4rem 1.5rem; }
     .company-info-grid { grid-template-columns: 1fr 1fr; }
     .about-company { padding: 4rem 1.5rem; }
   }
@@ -239,61 +366,93 @@ permalink: /about/
 <section class="about-page-hero">
   <div class="about-page-hero-content">
     <p class="section-tag">About</p>
-    <h1>Where <em>engineering</em><br/>meets curiosity</h1>
+    <h1>Built to solve<br/><em>hard problems</em></h1>
+    <p class="about-hero-sub">Korver AI Solutions is an independent AI consultancy. We design and build custom AI systems for organisations where generic tools aren't good enough.</p>
   </div>
 </section>
 
-<div class="about-page-body">
-  <div class="about-page-visual">
-    <img src="{{ '/assets/images/branding/favicon_navy.png' | relative_url }}" 
-        alt="Korver AI Solutions" 
-        style="width:60%; border-radius: 1rem;" />
+<!-- MISSION -->
+<div class="about-mission">
+  <div class="about-mission-visual reveal"></div>
+  <div class="about-mission-text reveal">
+    <p class="section-tag">Mission</p>
+    <h2>AI that actually<br/><em>fits the problem</em></h2>
+    <p>Most organisations that want to use AI face the same frustration: the tools that exist weren't built for their specific situation. They're either too generic, too expensive, or too difficult to integrate into real workflows.</p>
+    <p>Korver AI Solutions exists to close that gap. We work with mid-size organisations, research institutions, and government bodies to build AI solutions that are purpose-built, fully integrated, and explainable to every stakeholder who needs to trust them.</p>
+    <p>We don't sell licences. We don't offer subscriptions to platforms. We build things that solve specific problems — and we hand them over completely.</p>
   </div>
-  <div class="about-page-text reveal">
-    <h2>Who we are</h2>
-    <p>Korver AI Solutions is an independent software and research studio. We build tools, systems, and solutions that are thoughtful, efficient, and built to last.</p>
-    <p>Whether it's a complex technical challenge or a research-driven product, we approach every project with the same rigour: understand the problem deeply, then solve it cleanly.</p>
+</div>
 
-    <h2>What we do</h2>
-    <p>We work at the intersection of software engineering and applied research — building things that are both technically sound and practically useful. Our projects span machine learning, robotics, data engineering, and research tooling.</p>
-
-    <h2>How we work</h2>
-    <div class="about-values">
-      <div class="about-value">
-        <div class="about-value-title">Understand first</div>
-        <div class="about-value-desc">We take time to deeply understand the problem before writing a single line of code.</div>
-      </div>
-      <div class="about-value">
-        <div class="about-value-title">Build clean</div>
-        <div class="about-value-desc">Simple, maintainable solutions over complex ones. Every time.</div>
-      </div>
-      <div class="about-value">
-        <div class="about-value-title">Stay curious</div>
-        <div class="about-value-desc">Research and engineering inform each other. We never stop learning.</div>
-      </div>
-      <div class="about-value">
-        <div class="about-value-title">Deliver value</div>
-        <div class="about-value-desc">The measure of good work is whether it actually solves the problem.</div>
-      </div>
+<!-- PRINCIPLES -->
+<div class="about-principles">
+  <div class="about-principles-header reveal">
+    <p class="section-tag">How We Operate</p>
+    <h2>Four principles<br/><em>we don't compromise on</em></h2>
+    <p>These aren't values on a poster. They're constraints that shape how we work on every project.</p>
+  </div>
+  <div class="principles-grid">
+    <div class="principle-card reveal">
+      <div class="principle-num">01</div>
+      <div class="principle-title">Understand before building</div>
+      <p class="principle-desc">We don't open a code editor until we understand the problem, the data, and the people who will use the output. Skipping this step is how projects fail.</p>
     </div>
+    <div class="principle-card reveal">
+      <div class="principle-num">02</div>
+      <div class="principle-title">Build clean</div>
+      <p class="principle-desc">Simple, maintainable solutions over clever ones. The measure of good engineering is whether the next person — or the client — can understand and extend it.</p>
+    </div>
+    <div class="principle-card reveal">
+      <div class="principle-num">03</div>
+      <div class="principle-title">Make it explainable</div>
+      <p class="principle-desc">AI that stakeholders can't understand doesn't get used. Every system we build is designed to be explained — from how it works to why it made a particular decision.</p>
+    </div>
+    <div class="principle-card reveal">
+      <div class="principle-num">04</div>
+      <div class="principle-title">Deliver full ownership</div>
+      <p class="principle-desc">When a project ends, the client owns everything — code, models, documentation. No lock-in, no dependency on us to keep the lights on.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHY LEAN / INDEPENDENT -->
+<div class="about-lean">
+  <div class="about-lean-visual reveal">
+    <div class="about-lean-stat">
+      <div class="about-lean-stat-num">6+</div>
+      <div class="about-lean-stat-label">Projects completed across 4 research areas</div>
+    </div>
+    <div class="about-lean-stat">
+      <div class="about-lean-stat-num">3+</div>
+      <div class="about-lean-stat-label">Years of applied AI development experience</div>
+    </div>
+    <div class="about-lean-stat">
+      <div class="about-lean-stat-num">100%</div>
+      <div class="about-lean-stat-label">Independent — no investor agenda, no billable-hour pressure</div>
+    </div>
+  </div>
+  <div class="about-lean-text reveal">
+    <p class="section-tag">Why Independent?</p>
+    <h2>Senior expertise<br/><em>without the overhead</em></h2>
+    <p>Large consultancies bring large teams, long timelines, and fees structured around both. For organisations that need a specific, well-defined AI system built properly, that model often doesn't make sense.</p>
+    <p>Korver AI Solutions operates lean by design. Every project is handled with full technical accountability — no delegation to junior staff, no work lost in handoffs between departments. You work directly with the person who builds the system.</p>
+    <p>That's not a limitation. For the problems we take on, it's an advantage.</p>
+    <a href="/services/" class="btn-primary">See how we work →</a>
   </div>
 </div>
 
 <!-- TEAM -->
 <div class="about-team">
   <div class="about-team-header reveal">
-    <p class="section-tag">Team</p>
-    <h2 class="section-title">The people <em>behind the work</em></h2>
+    <p class="section-tag">The Team</p>
+    <h2>The people<br/><em>behind the work</em></h2>
+    <p>Korver AI Solutions brings together technical depth and complementary expertise to deliver projects end-to-end.</p>
   </div>
   <div class="team-grid">
-
-    <!-- Stijn Korver -->
     <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
       <div class="person-photo-placeholder">SK</div>
       <div class="person-body">
         <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
+        <div class="person-role">Founder & AI Engineer</div>
         <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
           <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
@@ -301,14 +460,11 @@ permalink: /about/
         </div>
       </div>
     </div>
-
-    <!-- Rosa Schrader -->
     <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
       <div class="person-photo-placeholder">RS</div>
       <div class="person-body">
         <div class="person-name">Rosa Schrader</div>
-        <div class="person-role">Makreting</div>
+        <div class="person-role">Marketing</div>
         <p class="person-bio">Short bio about Rosa goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
           <a href="https://linkedin.com/in/rosa-s-103730222/" class="person-link" target="_blank">↗ LinkedIn</a>
@@ -316,10 +472,7 @@ permalink: /about/
         </div>
       </div>
     </div>
-
-    <!-- Ole Korver -->
     <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
       <div class="person-photo-placeholder">OK</div>
       <div class="person-body">
         <div class="person-name">Ole Korver</div>
@@ -331,14 +484,11 @@ permalink: /about/
         </div>
       </div>
     </div>
-
-    <!-- Cas Korver -->
     <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
       <div class="person-photo-placeholder">CK</div>
       <div class="person-body">
         <div class="person-name">Cas Korver</div>
-        <div class="person-role">Policymaker</div>
+        <div class="person-role">Policy</div>
         <p class="person-bio">Short bio about Cas goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
           <a href="https://linkedin.com/in/cas-korver/" class="person-link" target="_blank">↗ LinkedIn</a>
@@ -346,10 +496,7 @@ permalink: /about/
         </div>
       </div>
     </div>
-
-    <!-- Floris Lokhorst -->
     <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
       <div class="person-photo-placeholder">FL</div>
       <div class="person-body">
         <div class="person-name">Floris Lokhorst</div>
@@ -361,21 +508,31 @@ permalink: /about/
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Blank Card -->
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">UP</div>
-      <div class="person-body">
-        <div class="person-name">Unknown Person</div>
-        <div class="person-role">Position</div>
-        <p class="person-bio">Short bio goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://www.linkedin.com/company/korver-ai/" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
+<!-- COMPANY INFO -->
+<div class="about-company">
+  <div class="about-company-header reveal">
+    <p class="section-tag">Company</p>
+    <h2 class="section-title">Registered in<br/><em>the Netherlands</em></h2>
+  </div>
+  <div class="company-info-grid reveal">
+    <div class="company-info-item">
+      <div class="company-info-label">Address</div>
+      <div class="company-info-value">Willem van Oranjelaan 79<br/>5211 CS, 's-Hertogenbosch<br/>The Netherlands</div>
     </div>
-
+    <div class="company-info-item">
+      <div class="company-info-label">KVK Number</div>
+      <a href="https://www.kvk.nl/bestellen/#/97486663000062723944" class="company-info-value" target="_blank">97486663</a>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">Phone</div>
+      <a href="tel:+31621931053" class="company-info-value">+31 6 21 93 10 53</a>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">Email</div>
+      <a href="mailto:hello@korver.ai" class="company-info-value">hello@korver.ai</a>
+    </div>
   </div>
 </div>
