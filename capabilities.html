@@ -264,7 +264,7 @@ permalink: /capabilities/
   /* CTA */
   .cap-cta {
     padding: 6rem 3rem;
-    background: var(--accent);
+    background: var(--navy);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -273,7 +273,7 @@ permalink: /capabilities/
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(55,71,130,0.1) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(251,195,36,0.08) 1px, transparent 1px);
     background-size: 32px 32px;
   }
   .cap-cta-content { position: relative; z-index: 1; }
@@ -282,11 +282,12 @@ permalink: /capabilities/
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    color: var(--navy);
+    color: var(--white);
     margin-bottom: 1rem;
   }
+  .cap-cta h2 em { font-style: normal; color: var(--accent); }
   .cap-cta p {
-    color: rgba(55,71,130,0.65);
+    color: rgba(255,255,255,0.5);
     font-size: 1.05rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
@@ -501,11 +502,11 @@ permalink: /capabilities/
 <!-- CTA -->
 <div class="cap-cta">
   <div class="cap-cta-content reveal">
-    <h2>Does your problem fit?</h2>
+    <h2>Does your problem <em>fit?</em></h2>
     <p>If you can see your challenge in these capabilities, it's worth a conversation. We'll tell you honestly if we're the right fit.</p>
     <div class="cap-cta-actions">
-      <a href="mailto:hello@korver.ai" class="btn-secondary">hello@korver.ai</a>
-      <a href="/services/" class="btn-primary">How we work →</a>
+      <a href="mailto:hello@korver.ai" class="btn-primary">hello@korver.ai</a>
+      <a href="/services/" class="btn-secondary">How we work →</a>
     </div>
   </div>
 </div>

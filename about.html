@@ -346,6 +346,48 @@ permalink: /about/
   }
   a.company-info-value:hover { opacity: 0.7; }
 
+  /* CTA */
+  .about-cta {
+    background: var(--navy);
+    padding: 6rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(251,195,36,0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .about-cta-content { position: relative; z-index: 1; }
+  .about-cta h2 {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .about-cta h2 em { font-style: normal; color: var(--accent); }
+  .about-cta p {
+    color: rgba(255,255,255,0.5);
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+  .about-cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   @media (max-width: 900px) {
     .about-page-hero { padding: 8rem 1.5rem 3rem; }
     .about-mission { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
@@ -516,6 +558,18 @@ permalink: /about/
 </div>
 
 <!-- COMPANY INFO -->
+<!-- CTA -->
+<div class="about-cta">
+  <div class="about-cta-content reveal">
+    <h2>Ready to build <em>something?</em></h2>
+    <p>Tell us what you're working on. If we're a good fit, we'll say so. If not, we'll point you in the right direction.</p>
+    <div class="about-cta-actions">
+      <a href="mailto:hello@korver.ai" class="btn-primary">hello@korver.ai</a>
+      <a href="/services/" class="btn-secondary">How we work →</a>
+    </div>
+  </div>
+</div>
+
 <!-- <div class="about-company">
   <div class="about-company-header reveal">
     <p class="section-tag">Company</p>

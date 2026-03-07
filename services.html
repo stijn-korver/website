@@ -444,7 +444,7 @@ permalink: /services/
   /* CTA */
   .services-cta {
     padding: 6rem 3rem;
-    background: var(--accent);
+    background: var(--navy);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -453,7 +453,7 @@ permalink: /services/
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(55,71,130,0.1) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(251,195,36,0.08) 1px, transparent 1px);
     background-size: 32px 32px;
   }
   .services-cta-content { position: relative; z-index: 1; }
@@ -462,11 +462,12 @@ permalink: /services/
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    color: var(--navy);
+    color: var(--white);
     margin-bottom: 1rem;
   }
+  .services-cta h2 em { font-style: normal; color: var(--accent); }
   .services-cta p {
-    color: rgba(55,71,130,0.65);
+    color: rgba(255,255,255,0.5);
     font-size: 1.05rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
@@ -684,8 +685,8 @@ permalink: /services/
 <!-- CTA -->
 <div class="services-cta">
   <div class="services-cta-content reveal">
-    <h2>Ready to scope something?</h2>
+    <h2>Ready to scope <em>something?</em></h2>
     <p>Tell us what you're working on. If we're a good fit, we'll say so. If not, we'll point you in the right direction.</p>
-    <a href="mailto:hello@korver.ai" class="btn-secondary">hello@korver.ai</a>
+    <a href="mailto:hello@korver.ai" class="btn-primary">hello@korver.ai</a>
   </div>
 </div>
