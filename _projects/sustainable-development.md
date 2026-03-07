@@ -4,7 +4,7 @@ title: Travel More Sustainably
 summary: Research on how Formula One can significantly reduce their emissions by reordering the calendar.
 category: Sustainability
 tags: [Research, Sustainability, Dashboard]
-banner: /assets/images/sustainable-development/banner.png
+banner: /assets/images/projects/sustainable-development/banner.png
 icon: 🌍
 order: 1
 date: November 2024
