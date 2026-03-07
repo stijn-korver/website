@@ -7,7 +7,7 @@ permalink: /about/
 <style>
   .about-page-hero {
     padding: 10rem 3rem 5rem;
-    background: var(--black);
+    background: var(--accent);
     position: relative;
     overflow: hidden;
   }
@@ -15,20 +15,20 @@ permalink: /about/
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(245,184,0,0.12) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(55,71,130,0.15) 1px, transparent 1px);
     background-size: 32px 32px;
   }
   .about-page-hero-content { position: relative; z-index: 1; }
-  .about-page-hero .section-tag { color: rgba(255,255,255,0.4); }
+  .about-page-hero .section-tag { color: rgba(55,71,130,0.5); }
   .about-page-hero h1 {
     font-family: var(--font-head);
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
     letter-spacing: -0.04em;
-    color: var(--white);
+    color: var(--navy);
     margin: 0.5rem 0 0;
   }
-  .about-page-hero h1 em { font-style: normal; color: var(--accent); }
+  .about-page-hero h1 em { font-style: normal; color: var(--black); }
 
   .about-page-body {
     padding: 6rem 3rem;
@@ -252,7 +252,9 @@ permalink: /about/
 
 <div class="about-page-body">
   <div class="about-page-visual">
-    <div class="about-page-visual-inner"></div>
+    <img src="{{ '/assets/images/branding/socials_icon.jpg' | relative_url }}" 
+        alt="Korver AI Solutions" 
+        style="width:60%; border-radius: 1rem;" />
   </div>
   <div class="about-page-text reveal">
     <h2>Who we are</h2>
@@ -292,24 +294,10 @@ permalink: /about/
   </div>
   <div class="team-grid">
 
-    <!-- Duplicate this card for each team member -->
-    <div class="person-card reveal">
-      <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" />
-      <!-- <div class="person-photo-placeholder">SK</div> -->
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
+    <!-- Stijn Korver -->
     <div class="person-card reveal">
       <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P1</div>
+      <div class="person-photo-placeholder">SK</div>
       <div class="person-body">
         <div class="person-name">Stijn Korver</div>
         <div class="person-role">Founder & Developer</div>
@@ -321,128 +309,77 @@ permalink: /about/
       </div>
     </div>
 
+    <!-- Rosa Schrader -->
     <div class="person-card reveal">
       <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P2</div>
+      <div class="person-photo-placeholder">RS</div>
       <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
+        <div class="person-name">Rosa Schrader</div>
+        <div class="person-role">Makreting</div>
+        <p class="person-bio">Short bio about Rosa goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
+          <a href="https://linkedin.com/in/rosa-s-103730222/" class="person-link" target="_blank">↗ LinkedIn</a>
+          <a href="mailto:rosa@korver.ai" class="person-link">✉ Email</a>
         </div>
       </div>
     </div>
 
+    <!-- Ole Korver -->
+    <div class="person-card reveal">
+      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
+      <div class="person-photo-placeholder">OK</div>
+      <div class="person-body">
+        <div class="person-name">Ole Korver</div>
+        <div class="person-role">Finance</div>
+        <p class="person-bio">Short bio about Ole goes here. A sentence or two about background, focus areas, and what drives the work.</p>
+        <div class="person-links">
+          <a href="https://linkedin.com/in/ole-korver-1aa354328/" class="person-link" target="_blank">↗ LinkedIn</a>
+          <a href="mailto:ole@korver.ai" class="person-link">✉ Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cas Korver -->
     <div class="person-card reveal">
       <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
       <div class="person-photo-placeholder">P3</div>
       <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
+        <div class="person-name">Cas Korver</div>
+        <div class="person-role">Policymaker</div>
+        <p class="person-bio">Short bio about Cas goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
+          <a href="https://linkedin.com/in/cas-korver/" class="person-link" target="_blank">↗ LinkedIn</a>
+          <a href="mailto:cas@korver.ai" class="person-link">✉ Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floris Lokhorst -->
+    <div class="person-card reveal">
+      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
+      <div class="person-photo-placeholder">FL</div>
+      <div class="person-body">
+        <div class="person-name">Floris Lokhorst</div>
+        <div class="person-role">Business Partner</div>
+        <p class="person-bio">Short bio about Floris goes here. A sentence or two about background, focus areas, and what drives the work.</p>
+        <div class="person-links">
+          <a href="https://linkedin.com/in/floris-lokhorst-65a97318a/" class="person-link" target="_blank">↗ LinkedIn</a>
           <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
         </div>
       </div>
     </div>
 
+    <!-- Blank Card -->
     <div class="person-card reveal">
       <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P4</div>
+      <div class="person-photo-placeholder">UP</div>
       <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
+        <div class="person-name">Unknown Person</div>
+        <div class="person-role">Position</div>
+        <p class="person-bio">Short bio goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P5</div>
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P6</div>
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P7</div>
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P8</div>
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P9</div>
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="person-card reveal">
-      <!-- <img class="person-photo" src="/assets/images/team/stijn-korver.png" alt="Stijn Korver" /> -->
-      <div class="person-photo-placeholder">P0</div>
-      <div class="person-body">
-        <div class="person-name">Stijn Korver</div>
-        <div class="person-role">Founder & Developer</div>
-        <p class="person-bio">Short bio about Stijn goes here. A sentence or two about background, focus areas, and what drives the work.</p>
-        <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
+          <a href="https://www.linkedin.com/company/korver-ai/" class="person-link" target="_blank">↗ LinkedIn</a>
+          <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
         </div>
       </div>
     </div>
@@ -459,15 +396,17 @@ permalink: /about/
   <div class="company-info-grid reveal">
     <div class="company-info-item">
       <div class="company-info-label">Address</div>
-      <div class="company-info-value">Street Name 1<br/>1234 AB City<br/>Netherlands</div>
+      <div class="company-info-value">Willem van Oranjelaan 79, 5211 CS<br/>'s-Hertogenbosch, the Netherlands</div>
     </div>
     <div class="company-info-item">
       <div class="company-info-label">KVK Number</div>
-      <div class="company-info-value">12345678</div>
+      <a href="https://www.kvk.nl/bestellen/#/97486663000062723944" 
+        class="company-info-value" 
+        target="_blank">97486663</a>
     </div>
     <div class="company-info-item">
       <div class="company-info-label">Phone</div>
-      <a href="tel:+31612345678" class="company-info-value">+31 6 1234 5678</a>
+      <a href="tel:+31612345678" class="company-info-value">+31 6 21 93 10 53</a>
     </div>
     <div class="company-info-item">
       <div class="company-info-label">Email</div>
