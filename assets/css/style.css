@@ -747,3 +747,38 @@ footer {
   .project-hero { padding: 8rem 1.5rem 3rem; }
   .project-body { padding: 3rem 1.5rem; }
 }
+
+/* FOOTER COMPANY */
+.footer-company {
+  background: var(--accent);
+  border-top: 1px solid rgba(45,55,120,0.15);
+  padding: 4rem 3rem;
+}
+.footer-company-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+.footer-tagline {
+  font-size: 0.875rem;
+  color: rgba(45,55,120,0.6);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-top: 1rem;
+  max-width: 280px;
+}
+.footer-company-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .footer-company-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-company-info { grid-template-columns: 1fr 1fr; }
+  .footer-company { padding: 3rem 1.5rem; }
+}
+@media (max-width: 600px) {
+  .footer-company-info { grid-template-columns: 1fr; }
+}
