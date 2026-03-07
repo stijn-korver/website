@@ -4,6 +4,7 @@ title: Predicting Hospital Readmissions
 summary: Model that can identify the key factors that contribute to hospital readmissions within 30 days among diabetic patients.
 category: Predicting
 tags: [Medical, Predictive]
+banner: /assets/images/predictive-modeling/banner.png
 icon: 🏥
 order: 2
 date: January 2025

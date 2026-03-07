@@ -4,6 +4,7 @@ title: Predicting Emotions from Text
 summary: Emotion classifier for six core emotions during Boer Zoekt Vrouw.
 category: Natural Language Processing
 tags: [NLP, Emotions, Predicting]
+banner: /assets/images/nlp/banner.png
 icon: 💬
 order: 5
 date: October 2025

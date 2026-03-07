@@ -4,6 +4,7 @@ title: Predicting the Chip Industry
 summary: Application that can predict the daily closing stock prices of companies operating in or closely associated with the chip industry.
 category: Predicting
 tags: [Finance, Predicting]
+banner: /assets/images/time-series-analysis/banner.png
 icon: 💹
 order: 4
 date: June 2025

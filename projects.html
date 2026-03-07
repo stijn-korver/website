@@ -182,7 +182,13 @@ permalink: /projects/
          data-title="{{ project.title }}">
       <a href="{{ project.url | relative_url }}" class="project-card" style="display:block;">
         <div class="project-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
-        <div class="project-icon">{{ project.icon }}</div>
+        {% if project.banner %}
+          <div class="project-banner">
+            <img src="{{ project.banner | relative_url }}" alt="{{ project.title }}" />
+          </div>
+        {% else %}
+          <div class="project-icon">{{ project.icon }}</div>
+        {% endif %}
         <h3 class="project-title">{{ project.title }}</h3>
         <p class="project-desc">{{ project.summary }}</p>
         <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1.5rem;">

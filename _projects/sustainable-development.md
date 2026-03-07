@@ -4,6 +4,7 @@ title: Travel More Sustainably
 summary: Research on how Formula One can significantly reduce their emissions by simply travelling more sustainably.
 category: Sustainability
 tags: [Sustainability, Research, Dashboard]
+banner: /assets/images/sustainable-development/banner.png
 icon: 🌍
 order: 1
 date: November 2024

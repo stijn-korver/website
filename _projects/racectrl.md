@@ -4,6 +4,7 @@ title: RaceCTRL
 summary: Image classification system that automatically detects collisions in motorsport to increase fairness and consistency.
 category: Classification
 tags: [Image Classification, Computer Vision]
+banner: /assets/images/racectrl/banner.png
 icon: 🏎️
 order: 3
 date: April 2025
