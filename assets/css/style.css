@@ -620,23 +620,6 @@ section { padding: 7rem 3rem; }
 .contact-email:hover { opacity: 0.7; }
 
 /* FOOTER */
-footer {
-  background: var(--accent);
-  border-top: 1px solid rgba(45,55,120,0.15);
-  padding: 2rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer-logo {
-  text-decoration: none;
-  display: inline-block;
-}
-.footer-copy {
-  font-size: 0.8rem;
-  color: rgba(45,55,120,0.4);
-}
-
 /* FILTER BUTTONS */
 .filter-btn {
   background: var(--gray-light);
@@ -743,7 +726,6 @@ footer {
   .about { grid-template-columns: 1fr; gap: 3rem; }
   .projects-grid { grid-template-columns: 1fr; }
   .projects-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-  footer { flex-direction: column; gap: 1rem; text-align: center; }
   .project-hero { padding: 8rem 1.5rem 3rem; }
   .project-body { padding: 3rem 1.5rem; }
 }
