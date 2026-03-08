@@ -777,15 +777,16 @@ a.company-info-value:hover { opacity: 0.7; }
 
 /* FOOTER STRIP */
 .site-footer {
-  background: var(--navy);
+  background: var(--accent);
   padding: 1.5rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid rgba(45,55,120,0.12);
 }
 .footer-copy {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
+  color: rgba(45,55,120,0.5);
   font-weight: 300;
 }
 .footer-logo {
@@ -796,7 +797,7 @@ a.company-info-value:hover { opacity: 0.7; }
 }
 .footer-logo:hover { opacity: 1; }
 .site-footer .footer-logo img {
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 @media (max-width: 900px) {
