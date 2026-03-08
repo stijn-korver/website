@@ -1,10 +1,10 @@
 ---
 layout: project
-title: End-to-End Inoculation System
-summary: Fully autonomous plant inoculation system combining U-Net segmentation and robotic control to deliver precise inoculation to root tips across thousands of Petri dishes.
+title: End-to-End Inoculation
+summary: Fully autonomous plant inoculation system combining image segmentation and robotic control to deliver precise inoculation to root tips across thousands of Petri dishes.
 category: Automation
-tags: [Computer Vision, Robotics, Deep Learning, Reinforcement Learning]
-banner: /assets/images/projects/npec-inoculation/banner.png
+tags: [Computer Vision, Robotics]
+banner: /assets/images/projects/end-to-end-inoculation/banner.png
 icon: 🌱
 order: 6
 date: January 2026
@@ -188,22 +188,22 @@ featured: true
 
 ## Overview
 
-Plant research requires precise, repeatable inoculation of hundreds of plants — a process that is traditionally manual, time-consuming, and prone to inconsistency. For meaningful scientific results, researchers need standardized conditions across large sample sizes.
+Plant research requires precise, repeatable inoculation of hundreds of plants. This process is traditionally manual, time-consuming, and prone to inconsistency. For meaningful scientific results, our client needed standardized conditions across large sample sizes.
 
-This project delivers a **fully autonomous end-to-end inoculation system** built for a large-scale plant phenotyping facility. It handles the complete workflow: from real-time plant detection using deep learning segmentation, to precise inoculation delivery via robotic control targeting *Arabidopsis thaliana* roots across a high-throughput system capable of processing up to **10,000 seedlings** across **2,000+ Petri dishes**.
+This project delivers a **fully autonomous end-to-end inoculation system** built for a large-scale plant phenotyping facility. It handles the complete workflow: from real-time plant detection using deep learning segmentation, to precise inoculation delivery via robotic control targeting *Arabidopsis thaliana* roots across a high-throughput system capable of processing up to 10,000 seedlings across over 2,000 Petri dishes.
 
 <div class="stat-row">
-  <div class="stat-box"><div class="stat-num">10<span>k</span></div><div class="stat-lbl">Seedlings supported</div></div>
-  <div class="stat-box"><div class="stat-num">2<span>k+</span></div><div class="stat-lbl">Petri dishes</div></div>
-  <div class="stat-box"><div class="stat-num">0.<span>83</span></div><div class="stat-lbl">F1-score (root class)</div></div>
-  <div class="stat-box"><div class="stat-num">100<span>%</span></div><div class="stat-lbl">PID success rate</div></div>
+  <div class="stat-box"><div class="stat-num">10k</div><div class="stat-lbl">Seedlings</div></div>
+  <div class="stat-box"><div class="stat-num">2k+</div><div class="stat-lbl">Petri Dishes</div></div>
+  <div class="stat-box"><div class="stat-num">93.6%</div><div class="stat-lbl">Accuracy</div></div>
+  <div class="stat-box"><div class="stat-num">100%</div><div class="stat-lbl">Inoculation Success</div></div>
 </div>
 
 ---
 
-## System Pipeline
+## Proposed Solution
 
-The full system runs autonomously from image capture to inoculation delivery. Click each step to explore what happens and why.
+The solution that we proposed to our client is a fully autonomous system that uses the cleints existing infrastructure to capture images, segment the plants from the image, locate the root-tips and communicates these to the robot so it can deliver the inoculation using a PID controller we designed. Click each step to explore what happens and why.
 
 <div class="section-label">Interactive — click a step</div>
 <div class="stepper-nav" id="pipelineNav">
@@ -214,33 +214,32 @@ The full system runs autonomously from image capture to inoculation delivery. Cl
 </div>
 <div class="stepper-panel">
   <div class="stepper-content active" id="pipeline-0">
-    <div class="stepper-img"><img src="/assets/images/projects/npec-inoculation/pipeline-capture.png" alt="Image Capture" /></div>
+    <div class="stepper-img"><img src="/assets/images/projects/end-to-end-inoculation/pipeline-capture.png" alt="Image Capture" /></div>
     <div class="stepper-text">
       <h4>Daily Time-Series Photography</h4>
       <p>Each Petri dish is photographed daily in a controlled imaging environment. The high-resolution grayscale images show plant roots growing downward through agar gel, with the seed at the top and the root tip at the bottom.</p>
       <p>The time-series nature of the capture enables growth tracking over days, but for inoculation the system uses the most recent image to determine current root tip positions.</p>
       <div class="detail-row">
-        <span class="detail-chip">Grayscale</span>
-        <span class="detail-chip">Daily cadence</span>
-        <span class="detail-chip">Controlled lighting</span>
+        <span class="detail-chip accent">Grayscale</span>
+        <span class="detail-chip">Daily Cadence</span>
+        <span class="detail-chip">Controlled Lighting</span>
       </div>
     </div>
   </div>
   <div class="stepper-content" id="pipeline-1">
-    <div class="stepper-img"><img src="/assets/images/projects/npec-inoculation/pipeline-segmentation.png" alt="Segmentation mask" /></div>
+    <div class="stepper-img"><img src="/assets/images/projects/end-to-end-inoculation/pipeline-segmentation.png" alt="Segmentation mask" /></div>
     <div class="stepper-text">
-      <h4>U-Net Segmentation</h4>
+      <h4>Segmentation</h4>
       <p>A U-Net model trained on labelled Petri dish images predicts a pixel-wise segmentation mask classifying each pixel as <em>background</em>, <em>root</em>, <em>seed</em>, or <em>shoot</em>.</p>
-      <p>The model operates on 128×128 patches tiled across the full image. To address severe class imbalance — the vast majority of pixels are background — background-only patches are aggressively filtered during training (90% removed), while all root/seed/shoot patches are kept.</p>
+      <p> Post-processing using more traditional computer vision techniques reinforces .</p>
       <div class="detail-row">
-        <span class="detail-chip">U-Net architecture</span>
-        <span class="detail-chip accent">F1 = 0.83</span>
-        <span class="detail-chip">128×128 patches</span>
+        <span class="detail-chip accent">U-Net Architecture</span>
+        <span class="detail-chip">Instance Segmentation</span>
       </div>
     </div>
   </div>
   <div class="stepper-content" id="pipeline-2">
-    <div class="stepper-img"><img src="/assets/images/projects/npec-inoculation/pipeline-roottip.png" alt="Root tip detection" /></div>
+    <div class="stepper-img"><img src="/assets/images/projects/end-to-end-inoculation/pipeline-roottip.png" alt="Root tip detection" /></div>
     <div class="stepper-text">
       <h4>Root Tip Localisation</h4>
       <p>After segmentation, post-processing converts the raw masks into actionable robot targets. The instance segmentation step separates individual plants within each dish, then skeletonises each root mask to extract its centreline.</p>
@@ -253,7 +252,7 @@ The full system runs autonomously from image capture to inoculation delivery. Cl
     </div>
   </div>
   <div class="stepper-content" id="pipeline-3">
-    <div class="stepper-img"><img src="/assets/images/projects/npec-inoculation/pipeline-inoculation.gif" alt="Autonomous inoculation" /></div>
+    <div class="stepper-img"><img src="/assets/images/projects/end-to-end-inoculation/pipeline-inoculation.gif" alt="Autonomous inoculation" /></div>
     <div class="stepper-text">
       <h4>Autonomous Delivery</h4>
       <p>A PID controller drives the robotic pipette to each detected root tip coordinate. The controller runs a closed-loop correction cycle, reducing positioning error to sub-millimetre precision before dispensing the inoculant.</p>
@@ -281,7 +280,7 @@ A key challenge was class imbalance: roots and seeds occupy only a small fractio
 <div class="before-after" style="margin-top:0.5rem;">
   <div class="ba-panel">
     <div class="ba-label">Background-only patches</div>
-    <div class="ba-image"><img src="/assets/images/projects/npec-inoculation/pipeline-capture.png" alt="Patch sampling" /></div>
+    <div class="ba-image"><img src="/assets/images/projects/end-to-end-inoculation/pipeline-capture.png" alt="Patch sampling" /></div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>90% removed</strong>Background-only tiles discarded</div>
       <div class="ba-stat"><strong>10% kept</strong>To preserve global context</div>
@@ -289,7 +288,7 @@ A key challenge was class imbalance: roots and seeds occupy only a small fractio
   </div>
   <div class="ba-panel">
     <div class="ba-label after">Root / Seed / Shoot patches</div>
-    <div class="ba-image"><img src="/assets/images/projects/npec-inoculation/pipeline-segmentation.png" alt="Root patches" /></div>
+    <div class="ba-image"><img src="/assets/images/projects/end-to-end-inoculation/pipeline-segmentation.png" alt="Root patches" /></div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>100% kept</strong>All informative patches retained</div>
       <div class="ba-stat"><strong>128×128 px</strong>Patch size</div>
@@ -334,7 +333,7 @@ A key challenge was separating individual plant roots in dense images. Early mod
 <div class="before-after">
   <div class="ba-panel">
     <div class="ba-label">Before</div>
-    <div class="ba-image"><img src="/assets/images/projects/npec-inoculation/segmentation-before.png" alt="Before: spurious detections" /></div>
+    <div class="ba-image"><img src="/assets/images/projects/end-to-end-inoculation/segmentation-before.png" alt="Before: spurious detections" /></div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>5 instances</strong>Plants detected</div>
       <div class="ba-stat"><strong>566 · 8 · 231 · 1 · 35 px</strong>Root lengths</div>
@@ -342,7 +341,7 @@ A key challenge was separating individual plant roots in dense images. Early mod
   </div>
   <div class="ba-panel">
     <div class="ba-label after">After</div>
-    <div class="ba-image"><img src="/assets/images/projects/npec-inoculation/segmentation-after.png" alt="After: clean instance segmentation" /></div>
+    <div class="ba-image"><img src="/assets/images/projects/end-to-end-inoculation/segmentation-after.png" alt="After: clean instance segmentation" /></div>
     <div class="ba-stats">
       <div class="ba-stat"><strong>2 instances</strong>Plants detected</div>
       <div class="ba-stat"><strong>569 · 236 px</strong>Root lengths</div>
@@ -392,9 +391,8 @@ Getting images out of the simulation environment required a structural refactor.
 <div class="code-diff">
   <div class="code-pane">
     <div class="code-pane-label before-label">Before</div>
-    <pre><span class="code-fn">npec</span><span class="code-dot">.</span><span class="code-fn">extract_tips</span>
-
-<span class="code-fn">npec</span><span class="code-dot">.</span><span class="code-fn">run_controller</span>
+    <pre><span class="code-fn">sys</span><span class="code-dot">.</span><span class="code-fn">extract_tips</span>
+<span class="code-fn">sys</span><span class="code-dot">.</span><span class="code-fn">run_controller</span>
   ├── <span class="code-fn">sim</span>(<span class="code-arg">num_agents</span>=<span class="code-val">1</span>)
   └── <span class="code-fn">sim</span><span class="code-dot">.</span><span class="code-fn">close</span>()</pre>
   </div>
@@ -402,15 +400,13 @@ Getting images out of the simulation environment required a structural refactor.
     <div class="code-pane-label after-label">After</div>
     <pre><span class="code-fn">sim</span>(<span class="code-arg">num_agents</span>=<span class="code-val">1</span>)
 
-<span class="code-fn">npec</span><span class="code-dot">.</span><span class="code-fn">extract_tips</span>
-
-<span class="code-fn">npec</span><span class="code-dot">.</span><span class="code-fn">run_controller</span>
-
+<span class="code-fn">sys</span><span class="code-dot">.</span><span class="code-fn">extract_tips</span>
+<span class="code-fn">sys</span><span class="code-dot">.</span><span class="code-fn">run_controller</span>
 <span class="code-fn">sim</span><span class="code-dot">.</span><span class="code-fn">close</span>()</pre>
   </div>
 </div>
 
-<p style="font-size:0.75rem;color:var(--gray);margin-top:-1rem;">* Illustrative — not actual API syntax</p>
+<p style="font-size:0.75rem;color:var(--gray);margin-top:-1rem;">* Illustrative — not actual syntax</p>
 
 ---
 
