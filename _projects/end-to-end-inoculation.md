@@ -49,6 +49,12 @@ featured: true
   .carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gray-mid); cursor: pointer; transition: background 0.2s, transform 0.2s; }
   .carousel-dot.active { background: var(--black); transform: scale(1.4); }
 
+  /* ── CHALLENGE CARDS ── */
+  .challenge-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin: 1.5rem 0; }
+  .challenge-card { background: rgba(231,76,60,0.07); border-left: 3px solid #e74c3c; border-radius: 0.6rem; padding: 0.85rem 1rem; }
+  .challenge-card strong { display: block; font-size: 0.82rem; color: #c0392b; margin-bottom: 0.3rem; }
+  .challenge-card p { font-size: 0.82rem; color: var(--gray); line-height: 1.6; margin: 0; text-align: left; }
+
   /* ── BEFORE / AFTER ── */
   .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
   .ba-panel { border-radius: 0.75rem; overflow: hidden; border: 1.5px solid var(--gray-mid); }
@@ -68,6 +74,7 @@ featured: true
 
   /* ── RESPONSIVE ── */
   @media (max-width: 700px) {
+    .challenge-cards { grid-template-columns: 1fr; }
     .csr-grid { grid-template-columns: 1fr; }
     .pipeline-carousel { grid-template-columns: repeat(4, calc(100% - 2rem)); overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 0.75rem; scrollbar-width: none; }
     .pipeline-carousel::-webkit-scrollbar { display: none; }
