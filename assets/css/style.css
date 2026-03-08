@@ -782,7 +782,6 @@ a.company-info-value:hover { opacity: 0.7; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(45,55,120,0.12);
 }
 .footer-copy {
   font-size: 0.8rem;
