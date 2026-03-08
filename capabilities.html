@@ -164,7 +164,8 @@ permalink: /capabilities/
     border-radius: 0.75rem;
     overflow: hidden;
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
     border: 1.5px solid var(--gray-mid);
     transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
   }
@@ -181,7 +182,7 @@ permalink: /capabilities/
     display: block;
     background: var(--gray-mid);
   }
-  .cap-project-body { padding: 1rem 1.25rem 1.25rem; }
+  .cap-project-body { padding: 1rem 1.25rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
   .cap-project-title {
     font-family: var(--font-head);
     font-size: 0.9rem;
@@ -195,6 +196,7 @@ permalink: /capabilities/
     color: var(--gray);
     font-weight: 300;
     line-height: 1.5;
+    flex: 1;
   }
   .cap-project-arrow {
     font-size: 0.8rem;

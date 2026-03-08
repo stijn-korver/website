@@ -275,6 +275,8 @@ layout: default
     padding: 2rem;
     border: 1.5px solid transparent;
     transition: border-color 0.25s, transform 0.25s;
+    display: flex;
+    flex-direction: column;
   }
   .home-service-card:hover {
     border-color: var(--accent);
@@ -297,6 +299,7 @@ layout: default
     color: var(--gray);
     font-weight: 300;
     line-height: 1.65;
+    flex: 1;
   }
   .home-engagements {
     display: flex;
@@ -363,7 +366,8 @@ layout: default
     border-radius: 1rem;
     padding: 2rem;
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
     transition: background 0.25s, border-color 0.25s, transform 0.25s;
   }
   .home-cap-card:hover {
@@ -393,6 +397,7 @@ layout: default
     font-weight: 300;
     line-height: 1.65;
     margin-bottom: 1.25rem;
+    flex: 1;
   }
   .home-cap-tags {
     display: flex;
