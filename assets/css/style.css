@@ -817,28 +817,31 @@ a.company-info-value:hover { opacity: 0.7; }
   gap: 0;
 }
 .nav-lang-pill {
-  width: 2rem;
-  height: 2rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-decoration: none;
-  border-radius: 50%;
-  transition: background 0.2s, opacity 0.2s;
+  line-height: 1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2rem;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
+  color: var(--navy);
 }
 .nav-lang-pill.active {
   background: var(--accent);
-  border-radius: 2rem;
+  color: var(--navy);
   opacity: 1;
 }
 .nav-lang-pill:not(.active) {
   background: transparent;
-  opacity: 0.45;
+  opacity: 0.4;
 }
 .nav-lang-pill:not(.active):hover {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 @media (max-width: 900px) {

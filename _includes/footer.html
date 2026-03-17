@@ -20,7 +20,7 @@
     </div>
     <div class="company-info-item">
       <div class="company-info-label">{% if page.lang == 'nl' %}Telefoon{% else %}Phone{% endif %}</div>
-      <a href="tel:+31621931053" class="company-info-value">+31 6 21 93 10 53</a>
+      <a href="tel:+31621931053" class="company-info-value">{% if page.lang == 'nl' %}06 21 93 10 53{% else %}+31 6 21 93 10 53{% endif %}</a>
     </div>
     <div class="company-info-item">
       <div class="company-info-label">{% if page.lang == 'nl' %}E-mail{% else %}Email{% endif %}</div>
