@@ -11,14 +11,26 @@ collections:
     output: true
     permalink: /projects/:name/
 
-# Build settings
+# Build Settings
 remote_theme: null
 plugins:
   - jekyll-feed
 
-# Exclude from processing
+# Language Settings
+defaults:
+  - scope:
+      path: "en"
+    values:
+      lang: en
+  - scope:
+      path: "nl"
+    values:
+      lang: nl
+
+# Exclude from Processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
+  - README.md
