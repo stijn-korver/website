@@ -14,9 +14,15 @@
       <a href="{{ page.lang_en | default: '/en/' }}" class="nav-lang-pill{% if page.lang == 'en' %} active{% endif %}">EN</a>
     </li>
   </ul>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-right">
+    <div class="nav-lang-toggle">
+      <a href="{{ page.lang_nl | default: '/nl/' }}" class="nav-lang-pill{% if page.lang == 'nl' %} active{% endif %}">NL</a>
+      <a href="{{ page.lang_en | default: '/en/' }}" class="nav-lang-pill{% if page.lang == 'en' %} active{% endif %}">EN</a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <div class="nav-mobile-menu" id="navMobileMenu">
@@ -26,8 +32,4 @@
   <a href="/capabilities/">Capabilities</a>
   <a href="/projects/">Projects</a>
   <a href="/contact/">{% if page.lang == 'nl' %}Contact{% else %}Get in Touch{% endif %}</a>
-  <div class="nav-lang-toggle" style="justify-content:center;">
-    <a href="{{ page.lang_nl | default: '/nl/' }}" class="nav-lang-pill{% if page.lang == 'nl' %} active{% endif %}">NL</a>
-    <a href="{{ page.lang_en | default: '/en/' }}" class="nav-lang-pill{% if page.lang == 'en' %} active{% endif %}">EN</a>
-  </div>
 </div>

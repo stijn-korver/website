@@ -808,6 +808,11 @@ a.company-info-value:hover { opacity: 0.7; }
   .footer-company-grid { grid-template-columns: 1fr; }
 }
 /* LANGUAGE SWITCHER */
+.nav-right {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
 .nav-lang-toggle {
   display: flex;
   align-items: center;
@@ -846,5 +851,5 @@ a.company-info-value:hover { opacity: 0.7; }
 
 @media (max-width: 900px) {
   li.nav-lang-toggle { display: none; }
-  div.nav-lang-toggle { display: flex; }
+  .nav-right { display: flex; }
 }
