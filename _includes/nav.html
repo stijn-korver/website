@@ -9,14 +9,14 @@
     <li><a href="/capabilities/">Capabilities</a></li>
     <li><a href="/projects/">Projects</a></li>
     <li><a href="/contact/" class="nav-cta">{% if page.lang == 'nl' %}Contact{% else %}Get in Touch{% endif %}</a></li>
+    <li class="nav-lang">
+      {% if page.lang == 'nl' %}
+        <a href="{{ page.lang_en | default: '/en/' }}" class="nav-lang-btn" title="English">🇬🇧</a>
+      {% else %}
+        <a href="{{ page.lang_nl | default: '/nl/' }}" class="nav-lang-btn" title="Nederlands">🇳🇱</a>
+      {% endif %}
+    </li>
   </ul>
-  <div class="nav-lang">
-    {% if page.lang == 'nl' %}
-      <a href="{{ page.lang_en | default: '/en/' }}" class="nav-lang-btn" title="English">🇬🇧</a>
-    {% else %}
-      <a href="{{ page.lang_nl | default: '/nl/' }}" class="nav-lang-btn" title="Nederlands">🇳🇱</a>
-    {% endif %}
-  </div>
   <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
