@@ -240,6 +240,18 @@ lang_nl: /nl/over-ons/
     font-weight: 300;
     line-height: 1.75;
   }
+  .team-subheading {
+    font-family: var(--font-head);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1.5px solid var(--gray-mid);
+  }
+  .team-subheading:first-of-type { margin-top: 0; }
   .team-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -500,6 +512,8 @@ lang_nl: /nl/over-ons/
     <h2>The people<br/><em>behind the work</em></h2>
     <p>Korver AI Solutions brings together technical depth and complementary expertise to deliver projects end-to-end.</p>
   </div>
+
+  <div class="team-subheading reveal">AI Specialists</div>
   <div class="team-grid">
     <!-- Stijn Korver -->
     <div class="person-card reveal">
@@ -509,8 +523,8 @@ lang_nl: /nl/over-ons/
         <div class="person-role">Founder & Data Analyst</div>
         <p class="person-bio">With a proactive mindset and a strong focus on continuous improvement, I enjoy turning complex data into clear, actionable insights.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:stijn@korver.ai" class="person-link">✉ Email</a>
+          <a href="https://linkedin.com/in/stijnkorver" class="person-link" target="_blank">&#8599; LinkedIn</a>
+          <a href="mailto:stijn@korver.ai" class="person-link">&#9993; Email</a>
         </div>
       </div>
     </div>
@@ -522,8 +536,8 @@ lang_nl: /nl/over-ons/
         <div class="person-role">Business Partner</div>
         <p class="person-bio">Short bio about Floris goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/floris-lokhorst-65a97318a/" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:florislokhorst@titotechnologies.com" class="person-link">✉ Email</a>
+          <a href="https://linkedin.com/in/floris-lokhorst-65a97318a/" class="person-link" target="_blank">&#8599; LinkedIn</a>
+          <a href="mailto:florislokhorst@titotechnologies.com" class="person-link">&#9993; Email</a>
         </div>
       </div>
     </div>
@@ -533,10 +547,10 @@ lang_nl: /nl/over-ons/
       <div class="person-body">
         <div class="person-name">Ana Maria Farazica</div>
         <div class="person-role">AI Engineer</div>
-        <p class="person-bio">My main interest lies in finding patterns where others see noise. But when I’m not debugging, you’ll probably find me on the couch with my cat.</p>
+        <p class="person-bio">My main interest lies in finding patterns where others see noise. But when I'm not debugging, you'll probably find me on the couch with my cat.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/ana-maria-farazica/" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
+          <a href="https://linkedin.com/in/ana-maria-farazica/" class="person-link" target="_blank">&#8599; LinkedIn</a>
+          <a href="mailto:hello@korver.ai" class="person-link">&#9993; Email</a>
         </div>
       </div>
     </div>
@@ -548,8 +562,8 @@ lang_nl: /nl/over-ons/
         <div class="person-role">Data Scientist</div>
         <p class="person-bio">I am ambitious, hard-working, and a perfectionist who always does the best I can. I always want my work to contribute to changes for the better.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/kinga-marchlewska-2a2899232/" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
+          <a href="https://linkedin.com/in/kinga-marchlewska-2a2899232/" class="person-link" target="_blank">&#8599; LinkedIn</a>
+          <a href="mailto:hello@korver.ai" class="person-link">&#9993; Email</a>
         </div>
       </div>
     </div>
@@ -561,13 +575,17 @@ lang_nl: /nl/over-ons/
         <div class="person-role">Data Engineer</div>
         <p class="person-bio">Short bio about Raya goes here. A sentence or two about background, focus areas, and what drives the work.</p>
         <div class="person-links">
-          <a href="https://linkedin.com/in/rayakichukova/" class="person-link" target="_blank">↗ LinkedIn</a>
-          <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
+          <a href="https://linkedin.com/in/rayakichukova/" class="person-link" target="_blank">&#8599; LinkedIn</a>
+          <a href="mailto:hello@korver.ai" class="person-link">&#9993; Email</a>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="team-subheading reveal">Business Specialists</div>
+  <div class="team-grid">
     <!-- Rosa Schrader -->
-    <!-- <div class="person-card reveal">
+    <div class="person-card reveal">
       <img class="person-photo" src="{{ '/assets/images/team/rosa-schrader.png' | relative_url }}" alt="RS" />
       <div class="person-body">
         <div class="person-name">Rosa Schrader</div>
@@ -578,9 +596,9 @@ lang_nl: /nl/over-ons/
           <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- Ole Korver -->
-    <!-- <div class="person-card reveal">
+    <div class="person-card reveal">
       <img class="person-photo" src="{{ '/assets/images/team/ole-korver.png' | relative_url }}" alt="OK" />
       <div class="person-body">
         <div class="person-name">Ole Korver</div>
@@ -591,9 +609,9 @@ lang_nl: /nl/over-ons/
           <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- Cas Korver -->
-    <!-- <div class="person-card reveal">
+    <div class="person-card reveal">
       <img class="person-photo" src="{{ '/assets/images/team/cas-korver.png' | relative_url }}" alt="CK" />
       <div class="person-body">
         <div class="person-name">Cas Korver</div>
@@ -604,7 +622,7 @@ lang_nl: /nl/over-ons/
           <a href="mailto:hello@korver.ai" class="person-link">✉ Email</a>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
 
