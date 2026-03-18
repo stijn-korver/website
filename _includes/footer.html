@@ -20,7 +20,7 @@
 </div>
 
 <footer class="site-footer">
-  <a href="{{ '/' | relative_url }}" class="footer-logo">
+  <a href="{% if page.lang == 'nl' %}/nl/{% else %}/en/{% endif %}" class="footer-logo">
     <img src="{{ '/assets/images/branding/wordmark_navy.png' | relative_url }}" alt="Korver AI Solutions" height="24" />
   </a>
   <p class="footer-copy">{% if page.lang == 'nl' %}© 2026 Korver AI Solutions — Alle rechten voorbehouden{% else %}© 2026 Korver AI Solutions — All rights reserved{% endif %}</p>
