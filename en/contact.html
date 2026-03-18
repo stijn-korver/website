@@ -318,6 +318,39 @@ lang_nl: /nl/contact/
     font-size: 0.95rem;
   }
 
+
+  .contact-form-success {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .contact-success-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 auto 1rem;
+  }
+  .contact-success-title {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .contact-success-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
   @media (max-width: 900px) {
     .contact-page-hero { padding: 8rem 1.5rem 3rem; }
     .contact-page-body { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
@@ -372,7 +405,7 @@ lang_nl: /nl/contact/
   <div class="contact-page-right reveal">
     <h2>Send us a message</h2>
     <p>Fill in the form below and we'll get back to you within three business days.</p>
-    <form class="contact-form" action="https://formspree.io/f/mvzwdrql" method="POST">
+    <form class="contact-form" id="contactForm">
       <div class="contact-form-group">
         <label class="contact-form-label" for="name">Name</label>
         <input class="contact-form-input" type="text" id="name" name="name" placeholder="Your name" required />
@@ -385,10 +418,42 @@ lang_nl: /nl/contact/
         <label class="contact-form-label" for="message">Message</label>
         <textarea class="contact-form-input contact-form-textarea" id="message" name="message" placeholder="Tell us about your project or question" required></textarea>
       </div>
-      <input type="hidden" name="_subject" value="New enquiry via korver.ai" />
-      <input type="hidden" name="_next" value="https://korver.ai/en/contact/?sent=true" />
-      <button type="submit" class="btn-primary contact-form-submit">Send Message →</button>
+      <button type="submit" class="btn-primary contact-form-submit" id="contactSubmit">Send Message →</button>
     </form>
+    <div class="contact-form-success" id="contactSuccess" style="display:none;">
+      <div class="contact-success-icon">✓</div>
+      <h3 class="contact-success-title">Message sent!</h3>
+      <p class="contact-success-desc">Thanks for reaching out. We'll get back to you within one business day.</p>
+    </div>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('contactSubmit');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        const data = new FormData(this);
+        data.append('_subject', 'New enquiry via korver.ai');
+        try {
+          const res = await fetch('https://formspree.io/f/mvzwdrql', {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            this.style.display = 'none';
+            document.getElementById('contactSuccess').style.display = 'block';
+          } else {
+            btn.textContent = 'Send Message →';
+            btn.disabled = false;
+            alert('Something went wrong. Please try emailing us directly at hello@korver.ai');
+          }
+        } catch {
+          btn.textContent = 'Send Message →';
+          btn.disabled = false;
+          alert('Something went wrong. Please try emailing us directly at hello@korver.ai');
+        }
+      });
+    </script>
     <div class="contact-divider"></div>
     <p class="contact-page-right-footer">Not sure if your problem is a fit? Read about our <a href="/en/capabilities/">capabilities</a> or <a href="/en/services/">how we work</a> first, or just reach out and ask.</p>
   </div>
