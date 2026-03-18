@@ -3,9 +3,9 @@ layout: project
 lang: nl
 lang_en: /en/projects/racectrl/
 title: RaceCTRL
-summary: Platform with image classification system that detects collisions in motorsport to increase stewarding consistency.
+summary: Platform met een beeldclassificatiesysteem dat botsingen in de autosport detecteert om de consistentie van de wedstrijdleiding te vergroten.
 category: Classification
-tags: [Image Classification, Computer Vision]
+tags: [Image Classification, Computer Visie]
 banner: /assets/images/projects/racectrl/banner.png
 icon: 🏎️
 order: 3
@@ -15,7 +15,7 @@ featured: true
 
 ## The Challenge
 
-In collaboration with [Tito Technologies](https://titotechnologies.com){:target="_blank"}, we developed [RaceCTRL](https://racectrl.ai){:target="_blank"}.
+In collaboration with [Tito Technologies](https://titotechnologies.com){:target="_blank"}, we developed [RaceCTRL](https://racectrl.ai/nl/){:target="_blank"}.
 
 ## What We Built
 

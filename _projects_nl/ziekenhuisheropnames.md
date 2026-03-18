@@ -2,10 +2,10 @@
 layout: project
 lang: nl
 lang_en: /en/projects/hospital-readmissions/
-title: Predicting Hospital Readmissions
-summary: System that can identify the key factors that contribute to hospital readmissions within 30 days among diabetic patients.
+title: Ziekenhuis Heropnames Voorspellen
+summary: Een systeem dat de belangrijkste factoren kan identificeren die bijdragen aan heropnames in het ziekenhuis binnen 30 dagen bij diabetespatiënten.
 category: Predicting
-tags: [Medical, Predictive Modeling]
+tags: [Medisch, Voorspellen]
 banner: /assets/images/projects/hospital-readmissions/banner.png
 icon: 🏥
 order: 2

@@ -2,10 +2,10 @@
 layout: project
 lang: nl
 lang_en: /en/projects/emotion-detection/
-title: Emotion Detection
-summary: Complete pipeline that detects emotions from Dutch television through generated transcripts.
+title: Emotie Detectie
+summary: Een compleet systeem dat emoties detecteert in het Nederlandse televisieprogramma "Boer Zoekt Vrouw" aan de hand van gegenereerde transcripten.
 category: Natural Language Processing
-tags: [Natural Language Processing, Transformer Models]
+tags: [Natural Language Processing, Transformer Modellen]
 banner: /assets/images/projects/emotion-detection/banner.png
 icon: 💬
 order: 5

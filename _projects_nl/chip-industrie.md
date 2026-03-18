@@ -2,10 +2,10 @@
 layout: project
 lang: nl
 lang_en: /en/projects/chip-industry/
-title: Predicting the Chip Industry
-summary: Application that can predict the daily closing stock prices of companies operating in the chip industry.
+title: Voorspellen van de Chip Industrie
+summary: Een applicatie die de dagelijkse slotkoersen van aandelen van bedrijven in de chipindustrie kan voorspellen.
 category: Time Series
-tags: [Time Series Analysis, Finance]
+tags: [Time Series Analyse, Financiën]
 banner: /assets/images/projects/chip-industry/banner.png
 icon: 💹
 order: 4

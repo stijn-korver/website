@@ -2,10 +2,10 @@
 layout: project
 lang: nl
 lang_en: /en/projects/end-to-end-inoculation/
-title: End-to-End Inoculation
-summary: Fully autonomous plant inoculation system combining image segmentation and robotic control for precise inoculation.
+title: End-to-End Inoculatie
+summary: Een volledig autonoom systeem voor het enten van planten, dat beeldsegmentatie en robotbesturing combineert voor nauwkeurige enting.
 category: Automation
-tags: [Computer Vision, Robotics]
+tags: [Computer Visie, Robotica]
 banner: /assets/images/projects/end-to-end-inoculation/banner.png
 icon: 🌱
 order: 6

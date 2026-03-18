@@ -15,7 +15,7 @@ featured: true
 
 ## The Challenge
 
-In collaboration with [Tito Technologies](https://titotechnologies.com){:target="_blank"}, we developed [RaceCTRL](https://racectrl.ai){:target="_blank"}.
+In collaboration with [Tito Technologies](https://titotechnologies.com){:target="_blank"}, we developed [RaceCTRL](https://racectrl.ai/en/){:target="_blank"}.
 
 ## What We Built
 

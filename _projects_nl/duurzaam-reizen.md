@@ -2,10 +2,10 @@
 layout: project
 lang: nl
 lang_en: /en/projects/sustainable-travel/
-title: Travel More Sustainably
-summary: Research on how Formula One can significantly reduce their emissions by reordering the calendar.
+title: Duurzamer Reizen
+summary: Onderzoek naar hoe de Formule 1 de uitstoot aanzienlijk kan verminderen door de kalender te herschikken.
 category: Research
-tags: [Research, Sustainability]
+tags: [Onderzoek, Duurzaamheid]
 banner: /assets/images/projects/sustainable-travel/banner.png
 icon: 🌍
 order: 1
