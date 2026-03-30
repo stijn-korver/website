@@ -114,7 +114,6 @@ lang_nl: /nl/vaardigheden/
   .cap-block.alt .cap-tag { background: var(--white); }
 
   /* DETAIL PANEL */
-  .cap-detail { }
   .cap-detail-section {
     margin-bottom: 2.5rem;
   }
@@ -171,7 +170,6 @@ lang_nl: /nl/vaardigheden/
     border: 1.5px solid var(--gray-mid);
     transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
   }
-  .cap-block.alt .cap-project-card { background: var(--white); }
   .cap-project-card:hover {
     border-color: var(--navy);
     transform: translateY(-3px);
@@ -206,6 +204,46 @@ lang_nl: /nl/vaardigheden/
     font-weight: 600;
     margin-top: 0.6rem;
     display: block;
+  }
+
+  /* EXAMPLE BOX — "looks like" scenarios */
+  .cap-example-box {
+    background: var(--white);
+    border-radius: 0.875rem;
+    padding: 1.5rem;
+    border-left: 3px solid var(--accent);
+    margin-bottom: 2.5rem;
+  }
+  .cap-block.alt .cap-example-box { background: var(--white); }
+  .cap-example-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 0.75rem;
+  }
+  .cap-example-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cap-example-list li {
+    font-size: 0.875rem;
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.55;
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+  .cap-example-list li::before {
+    content: '↳';
+    color: var(--accent-dark);
+    font-weight: 700;
+    flex-shrink: 0;
   }
 
   /* SUPPORTING CAPABILITIES */
@@ -328,35 +366,256 @@ lang_nl: /nl/vaardigheden/
 <section class="cap-hero">
   <div class="cap-hero-content">
     <p class="section-tag">Capabilities</p>
-    <h1>What we<br/>actually <em>know how to do</em></h1>
-    <p class="cap-hero-sub">Whether you're a local business looking to save time, or a research institution needing a fully integrated AI pipeline, these are the areas where we deliver real results.</p>
+    <h1>Practical things<br/>we <em>build for you</em></h1>
+    <p class="cap-hero-sub">No jargon, no buzzwords. These are the specific problems we solve for small and medium businesses — written in plain language so you can see whether your situation fits.</p>
   </div>
 </section>
 
-<!-- CAPABILITY 01: DATA ANALYSIS -->
-<div class="cap-block" id="data-analysis">
+<!-- CAPABILITY 01: DOCUMENT PROCESSING -->
+<div class="cap-block" id="document-processing">
   <div class="cap-block-label reveal">
     <div class="cap-num">01</div>
-    <div class="cap-category">Core Capability</div>
-    <h2 class="cap-name">Data<br/><em>Analysis</em></h2>
-    <p class="cap-summary">Most organisations are sitting on more data than they realise: sales figures, sensor logs, customer records, operational metrics. We turn that data into something you can actually act on: clear findings, honest forecasts, and tools that help you make better decisions.</p>
+    <div class="cap-category">Automation</div>
+    <h2 class="cap-name">Automate your<br/><em>documents</em></h2>
+    <p class="cap-summary">Invoices, order forms, delivery notes, contracts, applications — if your team is manually reading, copying, or filing documents, that work can be automated. We build systems that extract the right information and put it exactly where it needs to go.</p>
     <div class="cap-tags">
-      <span class="cap-tag">Time-Series</span>
-      <span class="cap-tag">Forecasting</span>
-      <span class="cap-tag">Dashboards</span>
-      <span class="cap-tag">Reporting</span>
+      <span class="cap-tag">Document Extraction</span>
+      <span class="cap-tag">Data Entry</span>
+      <span class="cap-tag">PDF Processing</span>
     </div>
   </div>
   <div class="cap-detail">
     <div class="cap-detail-section reveal">
+      <div class="cap-example-box">
+        <div class="cap-example-label">What this looks like in practice</div>
+        <ul class="cap-example-list">
+          <li>Invoices arriving by email are read, extracted, and pushed to your accounting system — no manual entry.</li>
+          <li>Customer order forms are scanned and the data appears in your CRM automatically.</li>
+          <li>Supplier delivery notes are processed and matched against purchase orders without anyone touching a keyboard.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cap-detail-section reveal">
       <div class="cap-detail-section-title">What we build</div>
       <ul class="cap-bullets">
-        <li>Research with honest methodology and conclusions you can stand behind</li>
-        <li>Time-series pipelines for financial, operational, or sensor data</li>
-        <li>Reports that explain findings to non-technical stakeholders</li>
+        <li>Pipelines that read and extract data from PDFs, scans, and email attachments</li>
+        <li>Systems that validate and route extracted data to the right place</li>
+        <li>Automated filing and archiving of processed documents</li>
+        <li>Exception handling for documents that need a human eye</li>
+        <li>Integration with your existing accounting, ERP, or CRM tools</li>
+        <li>Audit trails so you always know what was processed and when</li>
+      </ul>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">Proven in practice</div>
+      <div class="cap-projects">
+        <a href="/en/projects/chip-industry/" class="cap-project-card">
+          <img class="cap-project-thumb" src="/assets/images/projects/chip-industry/banner.png" alt="Predicting the Chip Industry" />
+          <div class="cap-project-body">
+            <div class="cap-project-title">Predicting the Chip Industry</div>
+            <p class="cap-project-desc">Automated data pipeline processing financial reports and market data across chip industry companies.</p>
+            <span class="cap-project-arrow">View Project</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPABILITY 02: REPORTING & DASHBOARDS -->
+<div class="cap-block alt" id="reporting">
+  <div class="cap-block-label reveal">
+    <div class="cap-num">02</div>
+    <div class="cap-category">Automation</div>
+    <h2 class="cap-name">Automate your<br/><em>reporting</em></h2>
+    <p class="cap-summary">Most businesses produce the same reports week after week — manually pulling numbers, copying them into spreadsheets, formatting them for different audiences. We automate that entire cycle so reports are ready when you need them, without anyone having to build them.</p>
+    <div class="cap-tags">
+      <span class="cap-tag">Automated Reports</span>
+      <span class="cap-tag">Dashboards</span>
+      <span class="cap-tag">Forecasting</span>
+    </div>
+  </div>
+  <div class="cap-detail">
+    <div class="cap-detail-section reveal">
+      <div class="cap-example-box">
+        <div class="cap-example-label">What this looks like in practice</div>
+        <ul class="cap-example-list">
+          <li>A weekly sales summary is generated every Monday morning and emailed to your team — no one has to pull it.</li>
+          <li>A live dashboard shows today's key numbers, updated automatically from your existing tools.</li>
+          <li>A monthly client report is assembled and formatted from your data, ready to send in minutes instead of hours.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">What we build</div>
+      <ul class="cap-bullets">
+        <li>Scheduled reports that run and distribute themselves automatically</li>
+        <li>Live dashboards your team will open every day, not just once</li>
+        <li>Data pipelines that pull from multiple sources and combine them cleanly</li>
+        <li>Forecasting models built on your own historical patterns</li>
+        <li>Alerts that flag anomalies before they become problems</li>
+        <li>Reports formatted for different audiences — management, clients, or operations</li>
+      </ul>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">Proven in practice</div>
+      <div class="cap-projects">
+        <a href="/en/projects/chip-industry/" class="cap-project-card">
+          <img class="cap-project-thumb" src="/assets/images/projects/chip-industry/banner.png" alt="Predicting the Chip Industry" />
+          <div class="cap-project-body">
+            <div class="cap-project-title">Predicting the Chip Industry</div>
+            <p class="cap-project-desc">Forecasting pipeline for daily stock prices across chip industry companies, with automated reporting.</p>
+            <span class="cap-project-arrow">View Project</span>
+          </div>
+        </a>
+        <a href="/en/projects/sustainable-travel/" class="cap-project-card">
+          <img class="cap-project-thumb" src="/assets/images/projects/sustainable-travel/banner.png" alt="Travel More Sustainably" />
+          <div class="cap-project-body">
+            <div class="cap-project-title">Travel More Sustainably</div>
+            <p class="cap-project-desc">Research translating complex emissions data into clear, actionable recommendations for Formula One.</p>
+            <span class="cap-project-arrow">View Project</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPABILITY 03: SCHEDULING & TASK ROUTING -->
+<div class="cap-block" id="scheduling">
+  <div class="cap-block-label reveal">
+    <div class="cap-num">03</div>
+    <div class="cap-category">Automation</div>
+    <h2 class="cap-name">Automate your<br/><em>scheduling</em></h2>
+    <p class="cap-summary">Coordinating who does what, when, and in what order takes more time than it should. Whether it's routing incoming jobs to the right person, managing bookings, or sequencing tasks across a team, we build systems that handle the logic automatically.</p>
+    <div class="cap-tags">
+      <span class="cap-tag">Task Routing</span>
+      <span class="cap-tag">Job Scheduling</span>
+      <span class="cap-tag">Workflow Logic</span>
+    </div>
+  </div>
+  <div class="cap-detail">
+    <div class="cap-detail-section reveal">
+      <div class="cap-example-box">
+        <div class="cap-example-label">What this looks like in practice</div>
+        <ul class="cap-example-list">
+          <li>Incoming service requests are classified and assigned to the right team member based on type, location, or availability — automatically.</li>
+          <li>A booking system that checks capacity, confirms appointments, and sends reminders without anyone managing a calendar.</li>
+          <li>Production tasks are sequenced and scheduled based on deadlines, dependencies, and current workload.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">What we build</div>
+      <ul class="cap-bullets">
+        <li>Routing logic that assigns tasks based on rules you define</li>
+        <li>Scheduling systems that factor in availability, priority, and dependencies</li>
+        <li>Automated confirmations, reminders, and status updates</li>
+        <li>Escalation flows that flag overdue or unassigned tasks</li>
+        <li>Integration with the calendars, CRMs, or tools you already use</li>
+        <li>Dashboards showing workload distribution and bottlenecks in real time</li>
+      </ul>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">Proven in practice</div>
+      <div class="cap-projects">
+        <a href="/en/projects/end-to-end-inoculation/" class="cap-project-card">
+          <img class="cap-project-thumb" src="/assets/images/projects/end-to-end-inoculation/banner.png" alt="End-to-End Inoculation System" />
+          <div class="cap-project-body">
+            <div class="cap-project-title">End-to-End Inoculation System</div>
+            <p class="cap-project-desc">Fully automated pipeline sequencing detection, decision logic, and robotic actuation — zero manual steps.</p>
+            <span class="cap-project-arrow">View Project</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPABILITY 04: CONNECT YOUR TOOLS -->
+<div class="cap-block alt" id="integrations">
+  <div class="cap-block-label reveal">
+    <div class="cap-num">04</div>
+    <div class="cap-category">Automation</div>
+    <h2 class="cap-name">Connect your<br/><em>tools</em></h2>
+    <p class="cap-summary">Most businesses use a handful of software tools that were never designed to talk to each other. Someone ends up bridging the gap manually — copying data from one system to another, re-entering the same information twice, or maintaining spreadsheets that shouldn't exist. We fix that.</p>
+    <div class="cap-tags">
+      <span class="cap-tag">System Integration</span>
+      <span class="cap-tag">API Connections</span>
+      <span class="cap-tag">Data Sync</span>
+    </div>
+  </div>
+  <div class="cap-detail">
+    <div class="cap-detail-section reveal">
+      <div class="cap-example-box">
+        <div class="cap-example-label">What this looks like in practice</div>
+        <ul class="cap-example-list">
+          <li>A new order in your webshop automatically creates a record in your accounting software and triggers a fulfilment task — no one types anything twice.</li>
+          <li>Customer data entered in your CRM syncs to your invoicing tool, your email platform, and your support system in real time.</li>
+          <li>Your project management tool updates automatically when a client signs a contract in a separate system.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">What we build</div>
+      <ul class="cap-bullets">
+        <li>Connections between tools that don't natively integrate</li>
+        <li>Automated data sync so records are consistent across systems</li>
+        <li>Event-driven workflows triggered by actions in one tool affecting another</li>
+        <li>Data transformation layers that translate between different formats</li>
+        <li>Error handling and logging so you always know when something breaks</li>
+        <li>Clean handover documentation so your team can maintain it independently</li>
+      </ul>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">Proven in practice</div>
+      <div class="cap-projects">
+        <a href="/en/projects/chip-industry/" class="cap-project-card">
+          <img class="cap-project-thumb" src="/assets/images/projects/chip-industry/banner.png" alt="Predicting the Chip Industry" />
+          <div class="cap-project-body">
+            <div class="cap-project-title">Predicting the Chip Industry</div>
+            <p class="cap-project-desc">Multi-source data pipeline integrating financial feeds, market data, and forecasting outputs into a single system.</p>
+            <span class="cap-project-arrow">View Project</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAPABILITY 05: MAKE BETTER DECISIONS -->
+<div class="cap-block" id="data-analysis">
+  <div class="cap-block-label reveal">
+    <div class="cap-num">05</div>
+    <div class="cap-category">Data & Insights</div>
+    <h2 class="cap-name">Make better<br/><em>decisions</em></h2>
+    <p class="cap-summary">Most businesses are sitting on data they've never properly looked at. Sales figures, operational logs, customer records — buried in spreadsheets or scattered across systems. We turn that data into clear findings and honest forecasts so you can make decisions with confidence, not gut feel.</p>
+    <div class="cap-tags">
+      <span class="cap-tag">Forecasting</span>
+      <span class="cap-tag">Trend Analysis</span>
+      <span class="cap-tag">Data Insights</span>
+    </div>
+  </div>
+  <div class="cap-detail">
+    <div class="cap-detail-section reveal">
+      <div class="cap-example-box">
+        <div class="cap-example-label">What this looks like in practice</div>
+        <ul class="cap-example-list">
+          <li>A demand forecast built on three years of your own sales history tells you how much stock to order next quarter.</li>
+          <li>An analysis of your customer data reveals which product lines are growing and which are quietly declining — before it shows up in your bottom line.</li>
+          <li>A single dashboard gives you an honest view of your operational performance, updated daily without anyone maintaining it.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cap-detail-section reveal">
+      <div class="cap-detail-section-title">What we build</div>
+      <ul class="cap-bullets">
+        <li>Forecasting models built on your own historical data</li>
+        <li>Clear analysis that tells you what your data actually means</li>
         <li>Dashboards your team will open every day, not just once</li>
-        <li>Analysis that tells you what your data actually means</li>
-        <li>Forecasting models built on your historical patterns</li>
+        <li>Reports that explain findings to non-technical stakeholders</li>
+        <li>Trend detection that surfaces patterns before they become obvious</li>
+        <li>Honest methodology — we tell you the limits of what the data can say</li>
       </ul>
     </div>
     <div class="cap-detail-section reveal">
@@ -374,107 +633,7 @@ lang_nl: /nl/vaardigheden/
           <img class="cap-project-thumb" src="/assets/images/projects/sustainable-travel/banner.png" alt="Travel More Sustainably" />
           <div class="cap-project-body">
             <div class="cap-project-title">Travel More Sustainably</div>
-            <p class="cap-project-desc">Research translating complex emissions data into an actionable calendar recommendation for Formula One.</p>
-            <span class="cap-project-arrow">View Project</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CAPABILITY 02: INTELLIGENT AUTOMATION -->
-<div class="cap-block alt" id="automation">
-  <div class="cap-block-label reveal">
-    <div class="cap-num">02</div>
-    <div class="cap-category">Core Capability</div>
-    <h2 class="cap-name">Intelligent<br/><em>Automation</em></h2>
-    <p class="cap-summary">If your team is spending hours on tasks that repeat the same pattern every day (data entry, report generation, scheduling, monitoring) that's time that can be given back. We build systems that handle it automatically, whether that's a simple workflow or a complex multi-step process.</p>
-    <div class="cap-tags">
-      <span class="cap-tag">Process Automation</span>
-      <span class="cap-tag">Time-Series</span>
-      <span class="cap-tag">Robotics</span>
-      <span class="cap-tag">Integration</span>
-    </div>
-  </div>
-  <div class="cap-detail">
-    <div class="cap-detail-section reveal">
-      <div class="cap-detail-section-title">What we build</div>
-      <ul class="cap-bullets">
-        <li>Scheduled pipelines that run reports, alerts, or exports automatically</li>
-        <li>Systems that collect, process, and act on data without human input</li>
-        <li>Monitoring systems that flag problems before they become expensive</li>
-        <li>Integrations that connect your existing tools and databases</li>
-        <li>Automations that eliminate repetitive manual tasks</li>
-        <li>Forecasting tools built on your historical data</li>
-      </ul>
-    </div>
-    <div class="cap-detail-section reveal">
-      <div class="cap-detail-section-title">Proven in practice</div>
-      <div class="cap-projects">
-        <a href="/en/projects/end-to-end-inoculation/" class="cap-project-card">
-          <img class="cap-project-thumb" src="/assets/images/projects/end-to-end-inoculation/banner.png" alt="End-to-End Inoculation System" />
-          <div class="cap-project-body">
-            <div class="cap-project-title">End-to-End Inoculation System</div>
-            <p class="cap-project-desc">Full pipeline from vision detection to robotic actuation — zero manual steps.</p>
-            <span class="cap-project-arrow">View Project</span>
-          </div>
-        </a>
-        <a href="/en/projects/chip-industry/" class="cap-project-card">
-          <img class="cap-project-thumb" src="/assets/images/projects/chip-industry/banner.png" alt="Predicting the Chip Industry" />
-          <div class="cap-project-body">
-            <div class="cap-project-title">Predicting the Chip Industry</div>
-            <p class="cap-project-desc">Predictive pipeline for chip industry stock data.</p>
-            <span class="cap-project-arrow">View Project</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CAPABILITY 03: COMPUTER VISION -->
-<div class="cap-block" id="computer-vision">
-  <div class="cap-block-label reveal">
-    <div class="cap-num">03</div>
-    <div class="cap-category">Core Capability</div>
-    <h2 class="cap-name">Computer<br/><em>Vision</em></h2>
-    <p class="cap-summary">If your process involves looking at something, products on a line, images, camera feeds, physical specimens, and someone has to manually check or judge it, we can build a system that does that automatically and consistently.</p>
-    <div class="cap-tags">
-      <span class="cap-tag">Image Classification</span>
-      <span class="cap-tag">Segmentation</span>
-      <span class="cap-tag">Detection</span>
-      <span class="cap-tag">Real-time</span>
-    </div>
-  </div>
-  <div class="cap-detail">
-    <div class="cap-detail-section reveal">
-      <div class="cap-detail-section-title">What we build</div>
-      <ul class="cap-bullets">
-        <li>Systems that automatically recognise, sort, or flag items from images or video</li>
-        <li>Custom models trained on your specific products, materials, or environment</li>
-        <li>Real-time camera feeds that trigger actions without manual review</li>
-        <li>Quality control tools that catch defects a human eye might miss</li>
-        <li>Anomaly detection for processes where consistency matters</li>
-        <li>Visual inspection tools that work at any scale</li>
-      </ul>
-    </div>
-    <div class="cap-detail-section reveal">
-      <div class="cap-detail-section-title">Proven in practice</div>
-      <div class="cap-projects">
-        <a href="/en/projects/end-to-end-inoculation/" class="cap-project-card">
-          <img class="cap-project-thumb" src="/assets/images/projects/end-to-end-inoculation/banner.png" alt="End-to-End Inoculation" />
-          <div class="cap-project-body">
-            <div class="cap-project-title">End-to-End Inoculation System</div>
-            <p class="cap-project-desc">Vision-guided robotics for autonomous plant inoculation at NPEC.</p>
-            <span class="cap-project-arrow">View Project</span>
-          </div>
-        </a>
-        <a href="/en/projects/racectrl/" class="cap-project-card">
-          <img class="cap-project-thumb" src="/assets/images/projects/racectrl/banner.png" alt="RaceCTRL" />
-          <div class="cap-project-body">
-            <div class="cap-project-title">RaceCTRL</div>
-            <p class="cap-project-desc">Collision detection classifier for motorsport officiating.</p>
+            <p class="cap-project-desc">Research translating complex emissions data into an actionable recommendation for Formula One.</p>
             <span class="cap-project-arrow">View Project</span>
           </div>
         </a>
@@ -486,26 +645,26 @@ lang_nl: /nl/vaardigheden/
 <!-- SUPPORTING CAPABILITIES -->
 <div class="cap-supporting">
   <div class="cap-supporting-header reveal">
-    <p class="section-tag">Supporting Capabilities</p>
-    <h2>Applied where<br/><em>the problem demands it</em></h2>
-    <p>Beyond our three core areas, we bring working knowledge in these domains. Used where a project requires it, never as the main pitch.</p>
+    <p class="section-tag">Also in Our Toolkit</p>
+    <h2>Applied where<br/><em>your problem demands it</em></h2>
+    <p>Beyond our five core areas, we bring working knowledge in these domains. They come into play when a project requires it — never as the main pitch.</p>
   </div>
   <div class="supporting-grid">
+    <div class="supporting-card reveal">
+      <div class="supporting-title">Computer Vision</div>
+      <p class="supporting-desc">If your process involves a human looking at something and making a judgment — products on a line, images, physical specimens — we can build a system that does it automatically and consistently, at any scale.</p>
+    </div>
+    <div class="supporting-card reveal">
+      <div class="supporting-title">Natural Language Processing</div>
+      <p class="supporting-desc">Systems that read, classify, or extract information from text — customer feedback, emails, contracts, or any written data you're currently processing by hand.</p>
+    </div>
     <div class="supporting-card reveal">
       <div class="supporting-title">Predictive Modelling</div>
       <p class="supporting-desc">Building models that forecast outcomes based on your historical data. Useful for planning, risk assessment, and spotting trends before they become problems.</p>
     </div>
     <div class="supporting-card reveal">
-      <div class="supporting-title">Natural Language Processing</div>
-      <p class="supporting-desc">Systems that read, classify, or extract information from text. Useful for processing customer feedback, documents, emails, or any other written data at scale.</p>
-    </div>
-    <div class="supporting-card reveal">
-      <div class="supporting-title">Data Engineering</div>
-      <p class="supporting-desc">Getting your data into a shape where it can actually be used. Cleaning, structuring, and connecting sources that weren't designed to work together.</p>
-    </div>
-    <div class="supporting-card reveal">
       <div class="supporting-title">Rapid Prototyping</div>
-      <p class="supporting-desc">A quick, working proof-of-concept that answers the real question before you commit to a full build: can this be done, and is it worth doing?</p>
+      <p class="supporting-desc">A working proof-of-concept that answers the real question before you commit to a full build: can this be done, and is it actually worth doing?</p>
     </div>
   </div>
 </div>
@@ -513,10 +672,10 @@ lang_nl: /nl/vaardigheden/
 <!-- CTA -->
 <div class="cap-cta">
   <div class="cap-cta-content reveal">
-    <h2>Does your problem <em>fit?</em></h2>
-    <p>If you can see your challenge in these capabilities, it's worth a conversation. We'll tell you honestly if we're the right fit.</p>
+    <h2>See your problem <em>in here?</em></h2>
+    <p>If something on this page sounds like your situation, it's worth a conversation. We'll tell you honestly whether we're the right fit — and what it would take to solve it.</p>
     <div class="cap-cta-actions">
-      <a href="/en/contact/" class="btn-primary">Get in Touch</a>
+      <a href="/en/contact/" class="btn-primary">Talk to Us</a>
       <a href="/en/services/" class="btn-secondary">How We Work</a>
     </div>
   </div>
